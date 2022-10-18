@@ -32,14 +32,14 @@
 | Total with Extra Credit | 102 |
 
 -----------------------------------
-### The National Football league interactive pamphlet must
+### The National Football league interactive pamphlet must:
 - [ ] 1.  Provide a help option to explain how to use the pamphlet
 - [ ] 2.  Provide a “contact us” option
 - [ ] 3.  Provide an option to display the original list of National Football:
     + [ ] 3.1.  teams sorted by team name.
     + [ ] 3.2.  teams sorted by stadium name.
     + [ ] 3.3.  teams sorted by seating capacity.
-- [ ] 4.  Provide an option to display the total capacity of the 
+- [ ] 4.  Provide an option to display the total capacity of the:
     + [ ] 4.1.  National Football league (note: count each stadium only once).
     + [ ] 4.2.  updated National Football league (note: count each stadium only once).
 - [ ] 5.  Provide an option to display (sorting):
