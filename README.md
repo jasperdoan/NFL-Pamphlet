@@ -32,7 +32,7 @@
 | Total with Extra Credit | 102 |
 
 -----------------------------------
-#### The National Football league interactive pamphlet must
+### The National Football league interactive pamphlet must
 - [ ] 1.  Provide a help option to explain how to use the pamphlet
 - [ ] 2.  Provide a “contact us” option
 - [ ] 3.  Provide an option to display the original list of National Football:
@@ -47,5 +47,6 @@
     + [ ] 5.2.  the team in the American Football Conference sort by team name.
     + [ ] 5.3.  the updated list of National Football teams sorted by team name.
 <br/>
+
 - Maintenance (administrator only - requires a password to gain access)
 - Provide the capability to add  a new National Football team by having your program read from the input file given to the class.
