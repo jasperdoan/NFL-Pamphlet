@@ -1,0 +1,9 @@
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/NFL-Pamphlet.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/NFL-Pamphlet_autogen_timestamp_deps.dir
+C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug/CMakeFiles/NFL-Pamphlet_autogen.dir

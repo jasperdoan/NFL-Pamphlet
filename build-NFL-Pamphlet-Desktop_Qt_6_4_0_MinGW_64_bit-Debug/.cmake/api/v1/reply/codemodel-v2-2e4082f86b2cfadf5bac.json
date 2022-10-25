@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-35ec0bd5f7d9cf0fc39a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "NFL-Pamphlet",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "NFL-Pamphlet::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NFL-Pamphlet-Debug-7b9ed2113e222fc85bd3.json",
+					"name" : "NFL-Pamphlet",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NFL-Pamphlet_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NFL-Pamphlet_autogen-Debug-e26649be9382566c0b11.json",
+					"name" : "NFL-Pamphlet_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "NFL-Pamphlet_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NFL-Pamphlet_autogen_timestamp_deps-Debug-a75738ed326bfcef1dd3.json",
+					"name" : "NFL-Pamphlet_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/jaspl/VS Projects/NFL-Pamphlet/build-NFL-Pamphlet-Desktop_Qt_6_4_0_MinGW_64_bit-Debug",
+		"source" : "C:/Users/jaspl/VS Projects/NFL-Pamphlet/NFL-Pamphlet"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
