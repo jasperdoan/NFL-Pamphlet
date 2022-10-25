@@ -15,6 +15,13 @@
     - Homi, am I on track?
   - plans are adaptive
   - accountable because of timeline
+
+---
+skipping to user stories, the important part
+---
+
+# User stories
+
  
 
   
