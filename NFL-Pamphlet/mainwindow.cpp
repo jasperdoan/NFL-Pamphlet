@@ -6,6 +6,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->comboBox->addItem("National Football Teams");
+    ui->comboBox->addItem("American Football Confrence");
+
 }
 
 MainWindow::~MainWindow()
