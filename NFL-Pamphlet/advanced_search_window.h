@@ -1,21 +1,21 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef ADVANCED_SEARCH_WINDOW_H
+#define ADVANCED_SEARCH_WINDOW_H
 
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui { class AdvancedSearchWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
+class AdvancedSearchWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    AdvancedSearchWindow(QWidget *parent = nullptr);
+    ~AdvancedSearchWindow();
 
 private:
-    Ui::MainWindow *ui;
+    Ui::AdvancedSearchWindow *ui;
 };
-#endif // MAINWINDOW_H
+#endif
