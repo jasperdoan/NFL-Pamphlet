@@ -1,20 +1,21 @@
 # USER STORY 1
 
-## *HELP WINDOW*
+## *HELP WINDOW UI*
     As a user, I need a to learn how to use the pamphlet
 
 ### description
 The user should be prompted with a help window explaining to them how to use the pamplet as well as tell the user what they can do with the pamplet, like:
-+ search
-+ filter
-+ request changes
++ How to use
++ Directions
++ Etc.
 
-### special feature
-+ pop up the window before the user can access the pamphlet
+### Special feature
++ Pop up the window before the user can access the pamphlet
++ Pictures with arrows and circles
 
 ### tasks
 + set up a QT ui window for a help window, seperate from the main ui
-+ keep instructons/text precise 
++ keep instructons/text precise, making sure to capatlize start of sentence
 
 ### assignee
 + Alex (ui)

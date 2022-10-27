@@ -1,6 +1,6 @@
 # USER STORY 2
 
-## *CONTACT US*
+## *CONTACT US UI*
     As a user, I want to be able to contact the pamphlet authors so I can notify them of a bug or thank them for creating a super cool, functional, and beautifuly designed pamphlet!
 
 ### description
@@ -13,7 +13,7 @@ The user can contact the authors of the pamphlet with just their email and messa
 + include a "send" push button
 
 ### assignee(s)
-+ Japser (ui) || Max (ui)
++  Max (ui)
 
 ### point-based est
 [x] 1 point
