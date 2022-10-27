@@ -151,3 +151,25 @@
 	}
 	```
 	- need to write template before every function
+	- arrays of int, double, etc can be held by the same class, printed by the same function
+		- ability to repurpose code
+	
+---
+- we can create classes that take in multiple types
+---
+- question?
+	- now that we have templates, is there even a point for overloading?
+		- from the developers perspective...?
+			- Yes! it's subtle
+			- if the code is identical, use a template
+				- need overloading if logic changes when types change
+	- Static Variable:
+	  - Remembers data over multiple calls
+	  - not true for a regular variable
+	  - implies that it does not belong in the scope where it is defined
+	  	- ex) `int countHowManyTimesThisFunctionHasBeenCalled`
+	  	- don't want a new instance of this every time the funciton is called
+	- Knowing this... static variables in templated class... how many static variables?
+		- one for each type
+		- because as stated earlier, the compiler generates a new class for us
+		- so for each new type used, a new static variable is created
