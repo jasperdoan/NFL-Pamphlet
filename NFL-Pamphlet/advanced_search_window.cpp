@@ -1,14 +1,18 @@
-#include "advanced_search_window.h"
-#include "ui_advanced_search_window.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
-advanced_search_window::advanced_search_window(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::advanced_search_window)
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->comboBox->addItem("National Football Teams");
+    ui->comboBox->addItem("American Football Confrence");
+
 }
 
-advanced_search_window::~advanced_search_window()
+MainWindow::~MainWindow()
 {
     delete ui;
 }
+
