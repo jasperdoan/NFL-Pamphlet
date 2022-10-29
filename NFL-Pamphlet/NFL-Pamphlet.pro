@@ -14,14 +14,16 @@ SOURCES += \
     filterwindow.cpp \
     helpwindow.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    teamdata.cpp
 
 HEADERS += \
     adminwindow.h \
     contactwindow.h \
     filterwindow.h \
     helpwindow.h \
-    mainwindow.h
+    mainwindow.h \
+    teamdata.h
 
 FORMS += \
     adminwindow.ui \
