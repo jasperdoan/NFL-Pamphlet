@@ -1,13 +1,13 @@
 #ifndef FILTERWINDOW_H
 #define FILTERWINDOW_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class FilterWindow;
 }
 
-class FilterWindow : public QWidget
+class FilterWindow : public QDialog
 {
     Q_OBJECT
 
