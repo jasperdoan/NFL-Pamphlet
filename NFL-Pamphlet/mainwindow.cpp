@@ -13,28 +13,28 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_filterButton_clicked()
 {
-    filterWindow = new FilterWindow();
+    filterWindow = new FilterWindow(this);
     filterWindow->show();
 }
 
 
 void MainWindow::on_helpButton_clicked()
 {
-    helpWindow = new HelpWindow();
+    helpWindow = new HelpWindow(this);
     helpWindow->show();
 }
 
 
 void MainWindow::on_contactButton_clicked()
 {
-    contactWindow = new ContactWindow();
+    contactWindow = new ContactWindow(this);
     contactWindow->show();
 }
 
 
 void MainWindow::on_loginButton_clicked()
 {
-    adminWindow = new AdminWindow();
+    adminWindow = new AdminWindow(this);
     adminWindow->show();
 }
 
