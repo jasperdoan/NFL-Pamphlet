@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <iomanip>
 #include <string>
 #include <vector>
 
@@ -11,8 +10,6 @@ using namespace std;
 
 namespace NFLData
 {
-    const int W = 15;
-
     enum Conference {NFC, AFC};
     enum Division {NORTH, SOUTH, EAST, WEST};
     enum RoofType {OPEN, RETRACTABLE, FIXED};
@@ -32,7 +29,17 @@ namespace NFLData
         
         public:
             TeamData(string, string , int, string, Conference, Division, string, RoofType, int);
-            void print();
+            ~TeamData();
+
+            string getTeamName();
+            string getStadiumName();
+            int getCapacity();
+            string getLocation();
+            string getConference();
+            string getDivision();
+            string getSurfaceType();
+            string getRoofType();
+            int getYearOpened();
     };
 
     void readData(vector<TeamData> &, const string );

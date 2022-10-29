@@ -5,20 +5,17 @@ NFLData::TeamData::TeamData(string teamName, string stadiumName, int capacity, s
                  : teamName(teamName), stadiumName(stadiumName), capacity(capacity), location(location), conference(conference), division(division), surfaceType(surfaceType), roofType(roofType), yearOpened(yearOpened) { }
 
 
+NFLData::TeamData::~TeamData() { }
 
-void NFLData::TeamData::print()
-{
-    cout << left;
-    cout << setw(W) << "Team Name: "    << teamName     << endl;
-    cout << setw(W) << "Stadium Name: " << stadiumName  << endl;
-    cout << setw(W) << "Capacity: "     << capacity     << endl;
-    cout << setw(W) << "Location: "     << location     << endl;
-    cout << setw(W) << "Conference: "   << (const string[]){"NFC", "AFC"}[conference]                   << endl;
-    cout << setw(W) << "Division: "     << (const string[]){"NORTH", "SOUTH", "EAST", "WEST"}[division] << endl;
-    cout << setw(W) << "Surface Type: " << surfaceType  << endl;
-    cout << setw(W) << "Roof Type: "    << (const string[]){"OPEN", "RETRACTABLE", "FIXED"}[roofType]   << endl;
-    cout << setw(W) << "Year Opened: "  << yearOpened   << endl;
-}
+string NFLData::TeamData::getTeamName() { return teamName; }
+string NFLData::TeamData::getStadiumName() { return stadiumName; }
+int NFLData::TeamData::getCapacity() { return capacity; }
+string NFLData::TeamData::getLocation() { return location; }
+string NFLData::TeamData::getConference() { return (const string[]){"NFC", "AFC"}[conference]; }
+string NFLData::TeamData::getDivision() { return (const string[]){"NORTH", "SOUTH", "EAST", "WEST"}[division]; }
+string NFLData::TeamData::getSurfaceType() { return surfaceType; }
+string NFLData::TeamData::getRoofType() { return (const string[]){"OPEN", "RETRACTABLE", "FIXED"}[roofType]; }
+int NFLData::TeamData::getYearOpened() { return yearOpened; }
 
 
 ///-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -121,3 +118,6 @@ void NFLData::readData(vector<TeamData> &teams, const string FILENAME)
 
     file.close();
 }
+
+
+///-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
