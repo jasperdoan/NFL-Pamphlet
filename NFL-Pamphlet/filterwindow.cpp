@@ -2,7 +2,7 @@
 #include "ui_filterwindow.h"
 
 FilterWindow::FilterWindow(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::FilterWindow)
 {
     ui->setupUi(this);
