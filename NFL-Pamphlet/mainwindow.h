@@ -7,37 +7,46 @@
 #include "filterwindow.h"
 #include "contactwindow.h"
 #include "adminwindow.h"
+#include "teamdata.h"
 
-namespace Ui {
-class MainWindow;
+using namespace NFLData;
+
+namespace Ui 
+{
+    class MainWindow;
 }
 
 class MainWindow : public QWidget
 {
     Q_OBJECT
 
-public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    private:
+        Ui::MainWindow *ui;
+        
+        HelpWindow *helpWindow;
+        FilterWindow *filterWindow;
+        ContactWindow *contactWindow;
+        AdminWindow *adminWindow;
 
-private slots:
-    void on_filterButton_clicked();
+        vector<TeamData> teamData;
+        vector<TeamData> filteredTeamData;
 
-    void on_helpButton_clicked();
+        void setupTable();
 
-    void on_contactButton_clicked();
+    private slots:
+        void on_filterButton_clicked();
 
-    void on_loginButton_clicked();
+        void on_helpButton_clicked();
 
-    void on_refreshButton_clicked();
+        void on_contactButton_clicked();
 
-private:
-    Ui::MainWindow *ui;
-    
-    HelpWindow *helpWindow;
-    FilterWindow *filterWindow;
-    ContactWindow *contactWindow;
-    AdminWindow *adminWindow;
+        void on_loginButton_clicked();
+
+        void on_refreshButton_clicked();
+
+    public:
+        explicit MainWindow(QWidget *parent = nullptr);
+        ~MainWindow();
 };
 
 #endif // MAINWINDOW_H
