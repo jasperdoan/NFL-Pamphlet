@@ -104,7 +104,7 @@
     <widget class="QLabel" name="NFLLabel">
      <property name="font">
       <font>
-       <pointsize>16</pointsize>
+       <pointsize>21</pointsize>
        <bold>true</bold>
       </font>
      </property>
