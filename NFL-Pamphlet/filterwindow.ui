@@ -622,6 +622,12 @@
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
+            <property name="currentText">
+             <string>Arizona</string>
+            </property>
+            <property name="maxVisibleItems">
+             <number>15</number>
+            </property>
             <item>
              <property name="text">
               <string>Arizona</string>
