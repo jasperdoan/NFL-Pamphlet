@@ -187,6 +187,7 @@
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
           <underline>true</underline>
@@ -284,6 +285,7 @@
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
           <underline>true</underline>
@@ -313,6 +315,7 @@
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
           <underline>true</underline>
@@ -356,6 +359,7 @@
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
           <underline>true</underline>
@@ -392,6 +396,7 @@
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
           <underline>true</underline>
@@ -426,6 +431,7 @@
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
           <underline>true</underline>
@@ -448,6 +454,7 @@
         <property name="font">
          <font>
           <pointsize>12</pointsize>
+          <weight>75</weight>
           <italic>false</italic>
           <bold>true</bold>
           <underline>true</underline>
@@ -654,6 +661,7 @@
      <property name="font">
       <font>
        <pointsize>14</pointsize>
+       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
@@ -672,5 +680,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>filterButton</sender>
+   <signal>clicked()</signal>
+   <receiver>FilterWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>771</x>
+     <y>616</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>678</x>
+     <y>611</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
