@@ -6,6 +6,8 @@ FilterWindow::FilterWindow(QWidget *parent) :
     ui(new Ui::FilterWindow)
 {
     ui->setupUi(this);
+    ui->comboBox->addItem("National Football");
+    ui->comboBox->addItem("American Football Confrence");
 }
 
 FilterWindow::~FilterWindow()
