@@ -45,7 +45,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="image1">
@@ -62,6 +62,24 @@
      </property>
      <property name="pixmap">
       <pixmap>../../../Downloads/nfl help how to.png</pixmap>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_5">
+    <widget class="QLabel" name="helpMainDisplay">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>601</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../Downloads/nfl help main display.png</pixmap>
      </property>
     </widget>
    </widget>
@@ -97,7 +115,25 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help refresh.png</pixmap>
+      <pixmap>../../../Downloads/nfl help refresh new.png</pixmap>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_4">
+    <widget class="QLabel" name="helpFilter">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>601</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../Downloads/nfl help filter.png</pixmap>
      </property>
     </widget>
    </widget>
@@ -118,19 +154,6 @@
    </property>
    <property name="text">
     <string>How to Navigate Around the Pamphlet</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>770</y>
-     <width>191</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>add image here</string>
    </property>
   </widget>
  </widget>
