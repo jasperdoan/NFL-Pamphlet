@@ -45,7 +45,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="image1">
@@ -61,12 +61,12 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help image 1 AHHHH.png</pixmap>
+      <pixmap>../../../Downloads/nfl help how to.png</pixmap>
      </property>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">
-    <widget class="QLabel" name="contactUs">
+    <widget class="QLabel" name="helpContactUs">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -79,7 +79,25 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help contact us.png</pixmap>
+      <pixmap>../../../Downloads/nfl help contact us real okok.png</pixmap>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QLabel" name="helpRefresh">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>591</width>
+       <height>521</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../Downloads/nfl help refresh.png</pixmap>
      </property>
     </widget>
    </widget>
@@ -100,6 +118,19 @@
    </property>
    <property name="text">
     <string>How to Navigate Around the Pamphlet</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>770</y>
+     <width>191</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>add image here</string>
    </property>
   </widget>
  </widget>
