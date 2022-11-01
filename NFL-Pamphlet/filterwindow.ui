@@ -6,644 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1002</width>
-    <height>640</height>
+    <width>837</width>
+    <height>470</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Filter</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="2">
-    <widget class="QWidget" name="widget_3" native="true">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="14" column="0">
-       <widget class="QCheckBox" name="isFEF">
-        <property name="text">
-         <string>FedExField</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QCheckBox" name="isSS">
-        <property name="text">
-         <string>SoFi Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QCheckBox" name="isAS">
-        <property name="text">
-         <string>Allegiant Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="isHRS">
-        <property name="text">
-         <string>Hard Rock Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QCheckBox" name="isMS">
-        <property name="text">
-         <string>MetLife Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="13" column="0">
-       <widget class="QCheckBox" name="isNS">
-        <property name="text">
-         <string>Nissan Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="12" column="0">
-       <widget class="QCheckBox" name="isRJS">
-        <property name="text">
-         <string>Raymond James Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QCheckBox" name="isUSBS">
-        <property name="text">
-         <string>U.S. Bank Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="15" column="0">
-       <widget class="QCheckBox" name="isAS_2">
-        <property name="text">
-         <string>Arrowhead Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QCheckBox" name="isGS">
-        <property name="text">
-         <string>Gillette Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0">
-       <widget class="QCheckBox" name="isHF">
-        <property name="text">
-         <string>Heinz Field</string>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="0">
-       <widget class="QCheckBox" name="isCF">
-        <property name="text">
-         <string>CenturyLink Field</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="0">
-       <widget class="QCheckBox" name="isLS">
-        <property name="text">
-         <string>Levi's Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0">
-       <widget class="QCheckBox" name="isMBSD">
-        <property name="text">
-         <string>Mercedes-Benz Superdome</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="0">
-       <widget class="QCheckBox" name="isLFF">
-        <property name="text">
-         <string>Lincoln Financial Field</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QWidget" name="widget_2" native="true">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="11" column="0">
-       <widget class="QCheckBox" name="isFF">
-        <property name="text">
-         <string>Ford Field</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0">
-       <widget class="QCheckBox" name="isSF">
-        <property name="text">
-         <string>Soldier Field</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0">
-       <widget class="QCheckBox" name="isATTS">
-        <property name="text">
-         <string>AT&amp;T Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="12" column="0">
-       <widget class="QCheckBox" name="isLF">
-        <property name="text">
-         <string>Lambeau Field</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="isMTBS">
-        <property name="text">
-         <string>MT Bank Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignBottom">
-       <widget class="QLabel" name="label_3">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>true</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Stadium Name</string>
-        </property>
-       </widget>
-      </item>
-      <item row="15" column="0">
-       <widget class="QCheckBox" name="isTIAABF">
-        <property name="text">
-         <string>TIAA Bank Field</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QCheckBox" name="isPBS">
-        <property name="text">
-         <string>Paul Brown Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="0">
-       <widget class="QCheckBox" name="isEFMH">
-        <property name="text">
-         <string>Empower Field at Mile High</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QCheckBox" name="isBS">
-        <property name="text">
-         <string>Bills Stadiuim</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QCheckBox" name="isBAS">
-        <property name="text">
-         <string>Bank of America Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QCheckBox" name="isSTS">
-        <property name="text">
-         <string>State Farm Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="14" column="0">
-       <widget class="QCheckBox" name="isLOS">
-        <property name="text">
-         <string>Lucas Oil Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="13" column="0">
-       <widget class="QCheckBox" name="isNRGS">
-        <property name="text">
-         <string>NRG Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="0">
-       <widget class="QCheckBox" name="isFES">
-        <property name="text">
-         <string>FirstEnergy Stadium</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QCheckBox" name="isMBS">
-        <property name="text">
-         <string>Mercedes-Benz Stadium</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QWidget" name="widget" native="true">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="9" column="0" alignment="Qt::AlignBottom">
-       <widget class="QLabel" name="label_9">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>true</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Roof Type</string>
-        </property>
-       </widget>
-      </item>
-      <item row="11" column="0">
-       <widget class="QCheckBox" name="isFixed">
-        <property name="text">
-         <string>Fixed</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QCheckBox" name="isNorth">
-        <property name="text">
-         <string>North</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" alignment="Qt::AlignBottom">
-       <widget class="QLabel" name="label_2">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>true</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Team Name</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QComboBox" name="conferenceBox">
-        <item>
-         <property name="text">
-          <string>National Football Conference</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>American Football Conference</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="6" column="0">
-       <widget class="QCheckBox" name="isSouth">
-        <property name="text">
-         <string>South</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="0">
-       <widget class="QCheckBox" name="isOpen">
-        <property name="text">
-         <string>Open</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0" alignment="Qt::AlignBottom">
-       <widget class="QLabel" name="label_8">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>true</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Divison</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLineEdit" name="teamNameBox">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="0">
-       <widget class="QCheckBox" name="isEast">
-        <property name="text">
-         <string>East</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QCheckBox" name="isWest">
-        <property name="text">
-         <string>West</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0" alignment="Qt::AlignBottom">
-       <widget class="QLabel" name="label_7">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>true</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Conference</string>
-        </property>
-       </widget>
-      </item>
-      <item row="12" column="0">
-       <widget class="QCheckBox" name="isRetractable">
-        <property name="text">
-         <string>Retractable</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QWidget" name="widget_4" native="true">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_5">
-      <item row="2" column="0" alignment="Qt::AlignBottom">
-       <widget class="QLabel" name="label_6">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>true</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Surface Type</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="0">
-       <widget class="QCheckBox" name="isDG">
-        <property name="text">
-         <string>Desso GrassMaster</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" alignment="Qt::AlignBottom">
-       <widget class="QLabel" name="label_5">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <italic>false</italic>
-          <bold>true</bold>
-          <underline>true</underline>
-         </font>
-        </property>
-        <property name="text">
-         <string>Location</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QCheckBox" name="isFTCHD">
-        <property name="text">
-         <string>FieldTurf Classic HD</string>
-        </property>
-       </widget>
-      </item>
-      <item row="6" column="0">
-       <widget class="QCheckBox" name="isKB">
-        <property name="text">
-         <string>Kentucky Bluegrass</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0">
-       <widget class="QCheckBox" name="isBG_2">
-        <property name="text">
-         <string>Bermuda Grass</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QCheckBox" name="isUBUSSS">
-        <property name="text">
-         <string>UBU Sports Speed Series S5-M Synthetic Turf</string>
-        </property>
-       </widget>
-      </item>
-      <item row="7" column="0">
-       <widget class="QCheckBox" name="isHMT">
-        <property name="text">
-         <string>Hellas Matrix Turf</string>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="0">
-       <widget class="QCheckBox" name="isPTP">
-        <property name="text">
-         <string>Platinum TE Paspalum</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QComboBox" name="comboBox">
-        <item>
-         <property name="text">
-          <string>Arizona</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Georgia</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Maryland</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>New York</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>North Carolina</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Illinois</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Ohio</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Texas</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Colorado</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Michigan</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Wisonsin</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Florida</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Missouri</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Nevada</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>California</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Minnesota</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Massachusetts</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Louisiana</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>New Jersey</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Tennessee</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Pennsylvania</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Washington</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Indiana</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="11" column="0">
-       <widget class="QCheckBox" name="isFTR">
-        <property name="text">
-         <string>FieldTurf Revolution</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0">
-       <widget class="QCheckBox" name="isBG">
-        <property name="text">
-         <string>Bermuda Grass</string>
-        </property>
-       </widget>
-      </item>
-      <item row="12" column="0">
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="0" colspan="5">
+   <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -654,6 +25,7 @@
      <property name="font">
       <font>
        <pointsize>14</pointsize>
+       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
@@ -662,15 +34,869 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="3">
-    <widget class="QPushButton" name="filterButton">
-     <property name="text">
-      <string>Filter</string>
-     </property>
-    </widget>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>true</underline>
+               </font>
+              </property>
+              <property name="text">
+               <string>Team Name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="teamNameBox">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>true</underline>
+               </font>
+              </property>
+              <property name="text">
+               <string>Conference</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="conferenceBox">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <item>
+               <property name="text">
+                <string>National Football Conference</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>American Football Conference</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>true</underline>
+               </font>
+              </property>
+              <property name="text">
+               <string>Divison</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="isNorth">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>North</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="isSouth">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>South</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="isWest">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>West</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="isEast">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>East</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <underline>true</underline>
+               </font>
+              </property>
+              <property name="text">
+               <string>Roof Type</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="isOpen">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>Open</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="isFixed">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>Fixed</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="isRetractable">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>Retractable</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QWidget" name="widget_2" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="cursor">
+              <cursorShape>ArrowCursor</cursorShape>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="10" column="0">
+               <widget class="QCheckBox" name="isEFMH">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Empower Field at Mile High</string>
+                </property>
+               </widget>
+              </item>
+              <item row="15" column="0">
+               <widget class="QCheckBox" name="isTIAABF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>TIAA Bank Field</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="isSTS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>State Farm Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QCheckBox" name="isSF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Soldier Field</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QCheckBox" name="isBAS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Bank of America Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QCheckBox" name="isPBS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Paul Brown Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QCheckBox" name="isBS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Bills Stadiuim</string>
+                </property>
+               </widget>
+              </item>
+              <item row="14" column="0">
+               <widget class="QCheckBox" name="isLOS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Lucas Oil Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0">
+               <widget class="QCheckBox" name="isFF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Ford Field</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="QCheckBox" name="isLF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Lambeau Field</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="isMBS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Mercedes-Benz Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignBottom">
+               <widget class="QLabel" name="label_3">
+                <property name="font">
+                 <font>
+                  <pointsize>12</pointsize>
+                  <weight>75</weight>
+                  <italic>false</italic>
+                  <bold>true</bold>
+                  <underline>true</underline>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Stadium Name</string>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="0">
+               <widget class="QCheckBox" name="isNRGS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>NRG Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QCheckBox" name="isMTBS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>MT Bank Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QCheckBox" name="isATTS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>AT&amp;T Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QCheckBox" name="isFES">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>FirstEnergy Stadium</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_3" native="true">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="cursor">
+              <cursorShape>ArrowCursor</cursorShape>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="7" column="0">
+               <widget class="QCheckBox" name="isMS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>MetLife Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QCheckBox" name="isSS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>SoFi Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="0">
+               <widget class="QCheckBox" name="isNS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Nissan Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QCheckBox" name="isGS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Gillette Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QCheckBox" name="isMBSD">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Mercedes-Benz Superdome</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="QCheckBox" name="isRJS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Raymond James Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0">
+               <widget class="QCheckBox" name="isCF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>CenturyLink Field</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QCheckBox" name="isHRS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Hard Rock Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QCheckBox" name="isLS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Levi's Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="14" column="0">
+               <widget class="QCheckBox" name="isFEF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>FedExField</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QCheckBox" name="isLFF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Lincoln Financial Field</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QCheckBox" name="isHF">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Heinz Field</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="isAS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Allegiant Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="15" column="0">
+               <widget class="QCheckBox" name="isAS_2">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>Arrowhead Stadium</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QCheckBox" name="isUSBS">
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="text">
+                 <string>U.S. Bank Stadium</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>538</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Location</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="currentText">
+             <string>Arizona</string>
+            </property>
+            <property name="maxVisibleItems">
+             <number>15</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>Arizona</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Georgia</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Maryland</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>New York</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>North Carolina</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Illinois</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ohio</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Texas</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Colorado</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Michigan</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Wisonsin</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Florida</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Missouri</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nevada</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>California</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Minnesota</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Massachusetts</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Louisiana</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>New Jersey</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tennessee</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Pennsylvania</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Washington</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Indiana</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Surface Type</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isFTCHD">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>FieldTurf Classic HD</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isBG">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Bermuda Grass</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isUBUSSS">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>UBU Sports Speed Series S5-M Synthetic Turf</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isKB">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Kentucky Bluegrass</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isHMT">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Hellas Matrix Turf</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isDG">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Desso GrassMaster</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isBG_2">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Bermuda Grass</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isPTP">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Platinum TE Paspalum</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="isFTR">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>FieldTurf Revolution</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="filterButton">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>Filter</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>filterButton</sender>
+   <signal>clicked()</signal>
+   <receiver>FilterWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>771</x>
+     <y>616</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>678</x>
+     <y>611</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
