@@ -20,7 +20,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="0">
-    <spacer name="horizontalSpacer_2">
+    <spacer name="leftNFLSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -37,7 +37,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="adminLabel">
          <property name="maximumSize">
           <size>
            <width>79</width>
@@ -55,7 +55,7 @@
         </widget>
        </item>
        <item alignment="Qt::AlignLeft|Qt::AlignTop">
-        <widget class="QTextEdit" name="usernameTextEdit">
+        <widget class="QTextEdit" name="adminTextToEdit">
          <property name="minimumSize">
           <size>
            <width>161</width>
@@ -80,7 +80,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="passwordLabel">
          <property name="maximumSize">
           <size>
            <width>79</width>
@@ -123,7 +123,7 @@
     </layout>
    </item>
    <item row="1" column="2">
-    <spacer name="horizontalSpacer_3">
+    <spacer name="rightNFLSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
