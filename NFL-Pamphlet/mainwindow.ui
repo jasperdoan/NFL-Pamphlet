@@ -19,14 +19,14 @@
    <string>NFL Pamphlet</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0" rowspan="2">
+   <item row="0" column="0">
     <spacer name="horizontalSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
-       <width>651</width>
+       <width>395</width>
        <height>20</height>
       </size>
      </property>
@@ -35,7 +35,7 @@
    <item row="0" column="1">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="usernameLabel">
        <property name="minimumSize">
         <size>
          <width>81</width>
@@ -59,7 +59,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextBrowser" name="textBrowser">
+      <widget class="QTextEdit" name="usernameTextEdit">
        <property name="minimumSize">
         <size>
          <width>161</width>
@@ -81,10 +81,10 @@
      </item>
     </layout>
    </item>
-   <item row="1" column="1">
+   <item row="0" column="2">
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="passwordLabel">
        <property name="minimumSize">
         <size>
          <width>81</width>
@@ -108,7 +108,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextBrowser" name="textBrowser_2">
+      <widget class="QTextEdit" name="passwordTextEdit">
        <property name="minimumSize">
         <size>
          <width>161</width>
@@ -130,13 +130,68 @@
      </item>
     </layout>
    </item>
-   <item row="2" column="0" colspan="2">
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item alignment="Qt::AlignHCenter">
+   <item row="2" column="0" colspan="3">
+    <widget class="QTableWidget" name="teamTable">
+     <property name="minimumSize">
+      <size>
+       <width>881</width>
+       <height>461</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="totalCapLabel">
+       <property name="text">
+        <string>Total Capacity:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QComboBox" name="dropdownBox">
+         <item>
+          <property name="text">
+           <string>Original</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Updated</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="capacityNum">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>450</width>
+           <height>27</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
       <widget class="QLabel" name="NFLLabel">
        <property name="font">
         <font>
-         <pointsize>25</pointsize>
+         <pointsize>30</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
@@ -146,7 +201,7 @@
        </property>
       </widget>
      </item>
-     <item>
+     <item row="1" column="0">
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="helpButton">
@@ -188,61 +243,6 @@
          </property>
          <property name="text">
           <string>Refresh</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </item>
-   <item row="3" column="0" colspan="2">
-    <widget class="QTableWidget" name="teamTable">
-     <property name="minimumSize">
-      <size>
-       <width>881</width>
-       <height>461</height>
-      </size>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0" colspan="2">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="totalCapLabel">
-       <property name="text">
-        <string>Total Capacity:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QComboBox" name="dropdownBox">
-         <item>
-          <property name="text">
-           <string>Original</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Updated</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="capacityNum">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>450</width>
-           <height>27</height>
-          </size>
          </property>
         </widget>
        </item>
