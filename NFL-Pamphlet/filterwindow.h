@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::FilterWindow *ui;
+    FilterWindow *filterWindow;
+
+private slots:
+    void on_filterButton_clicked();
 };
 
 #endif // FILTERWINDOW_H
