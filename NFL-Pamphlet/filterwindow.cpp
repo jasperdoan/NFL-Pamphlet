@@ -8,12 +8,12 @@ FilterWindow::FilterWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->comboBox->addItem("National Football");
     ui->comboBox->addItem("American Football Confrence");
+    setAttribute(Qt::WA_DeleteOnClose);
 }
 
 void FilterWindow::on_filterButton_clicked()
 {
    filterWindow = new FilterWindow(this);
-   filterWindow->setAttribute(Qt::WA_DeleteOnClose);
    filterWindow->show();
 }
 
