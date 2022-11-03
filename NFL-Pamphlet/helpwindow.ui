@@ -1,161 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>HelpWindow</class>
- <widget class="QWidget" name="HelpWindow">
+ <widget name="HelpWindow" class="QDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>954</width>
-    <height>987</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
-  <property name="acceptDrops">
-   <bool>false</bool>
-  </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Dialog</string>
   </property>
-  <property name="windowOpacity">
-   <double>-1.000000000000000</double>
-  </property>
-  <property name="autoFillBackground">
-   <bool>false</bool>
-  </property>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>15</x>
-     <y>586</y>
-     <width>16</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QStackedWidget" name="stackedWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>40</y>
-     <width>618</width>
-     <height>539</height>
-    </rect>
-   </property>
-   <property name="currentIndex">
-    <number>1</number>
-   </property>
-   <widget class="QWidget" name="page">
-    <widget class="QLabel" name="image1">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>0</y>
-       <width>600</width>
-       <height>521</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help how to.png</pixmap>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="page_5">
-    <widget class="QLabel" name="helpMainDisplay">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>0</y>
-       <width>601</width>
-       <height>521</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help main display.png</pixmap>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="page_2">
-    <widget class="QLabel" name="helpContactUs">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>0</y>
-       <width>601</width>
-       <height>521</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help contact us real okok.png</pixmap>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="page_3">
-    <widget class="QLabel" name="helpRefresh">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>0</y>
-       <width>591</width>
-       <height>521</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help refresh new.png</pixmap>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="page_4">
-    <widget class="QLabel" name="helpFilter">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>0</y>
-       <width>601</width>
-       <height>521</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../../../Downloads/nfl help filter.png</pixmap>
-     </property>
-    </widget>
-   </widget>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>343</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>15</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>How to Navigate Around the Pamphlet</string>
-   </property>
-  </widget>
  </widget>
  <resources/>
  <connections/>

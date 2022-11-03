@@ -2,7 +2,7 @@
 #include "ui_adminwindow.h"
 
 AdminWindow::AdminWindow(QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::AdminWindow)
 {
     ui->setupUi(this);
