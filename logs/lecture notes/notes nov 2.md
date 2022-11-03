@@ -6,3 +6,17 @@
   - it can't build the class, it is unable to link the implementation of the functions with the header file
   	- so, either include .cpp file in main or copy and paste the cpp file at the bottom of the h file
   
+---
+# Recursion
+
+### function calls itself
+  - base case
+  - call function case
+
+### What are good use-cases for recursion?
+  - factorial
+      '''
+      n! = n x (n-1) x (n-2) x ... x 1
+         = n x (n-1)!
+         
+  - fibbonacci
