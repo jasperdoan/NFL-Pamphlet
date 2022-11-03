@@ -35,7 +35,6 @@ void MainWindow::on_filterButton_clicked()
     filterWindow->show();
 =======
     filterWindow = new FilterWindow(this);              // Create a new FilterWindow object
-    filterWindow->setAttribute(Qt::WA_DeleteOnClose);   // Delete the FilterWindow object when it is closed
     filterWindow->show();                               // Show the FilterWindow object
 >>>>>>> main
 }
@@ -48,7 +47,6 @@ void MainWindow::on_helpButton_clicked()
     helpWindow->show();
 =======
     helpWindow = new HelpWindow(this);                  // Create a new HelpWindow object
-    helpWindow->setAttribute(Qt::WA_DeleteOnClose);     // Delete the HelpWindow object when it is closed
     helpWindow->show();                                 // Show the HelpWindow object
 >>>>>>> main
 }
@@ -61,7 +59,6 @@ void MainWindow::on_contactButton_clicked()
     contactWindow->show();
 =======
     contactWindow = new ContactWindow(this);            // Create a new ContactWindow object
-    contactWindow->setAttribute(Qt::WA_DeleteOnClose);  // Delete the ContactWindow object when it is closed
     contactWindow->show();                              // Show the ContactWindow object
 >>>>>>> main
 }
@@ -74,7 +71,6 @@ void MainWindow::on_loginButton_clicked()
     adminWindow->show();
 =======
     adminWindow = new AdminWindow(this);                // Create a new AdminWindow object
-    adminWindow->setAttribute(Qt::WA_DeleteOnClose);    // Delete the AdminWindow object when it is closed
     adminWindow->show();                                // Show the AdminWindow object                  
 >>>>>>> main
 }

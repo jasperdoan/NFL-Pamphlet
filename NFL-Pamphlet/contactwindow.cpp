@@ -6,6 +6,7 @@ ContactWindow::ContactWindow(QWidget *parent) :
 		ui(new Ui::ContactWindow)
 {
 		ui->setupUi(this);
+		setAttribute(Qt::WA_DeleteOnClose);
 }
 
 ContactWindow::~ContactWindow()
