@@ -91,7 +91,7 @@
           </font>
          </property>
          <property name="text">
-          <string>NFL Pamphlet</string>
+          <string>NFL Pamphlet                      </string>
          </property>
         </widget>
        </item>
@@ -102,20 +102,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>128</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_4">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>148</width>
+           <width>168</width>
            <height>20</height>
           </size>
          </property>
