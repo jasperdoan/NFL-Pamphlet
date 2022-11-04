@@ -28,8 +28,6 @@ class FilterWindow : public QDialog, public DisplayData
     public:
         explicit FilterWindow(QWidget *parent = nullptr);
         ~FilterWindow();
-
-        void filterData();
 };
 
 #endif // FILTERWINDOW_H

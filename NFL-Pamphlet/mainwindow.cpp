@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
     // Display teamData in the table widget
     setupTable();
     displayTable(teamData);
+
+
 }
 
 
@@ -28,8 +30,6 @@ void MainWindow::on_filterButton_clicked()
 {
     filterWindow = new FilterWindow(this);              // Create a new FilterWindow object
     filterWindow->show();                               // Show the FilterWindow object
-
-
 }
 
 
@@ -56,7 +56,7 @@ void MainWindow::on_loginButton_clicked()
 
 void MainWindow::on_refreshButton_clicked()
 {
-
+    displayTable(teamData);
 }
 
 

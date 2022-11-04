@@ -39,8 +39,6 @@ class MainWindow : public QWidget, public DisplayData
     public:
         explicit MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
-
-        
 };
 
 #endif // MAINWINDOW_H

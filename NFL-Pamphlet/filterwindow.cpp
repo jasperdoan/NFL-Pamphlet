@@ -16,9 +16,25 @@ FilterWindow::FilterWindow(QWidget *parent) : QDialog(parent), ui(new Ui::Filter
 
 void FilterWindow::on_filterButton_clicked()
 {
+    string division = ui->divisionBox->currentText().toStdString();
+    string stadium = ui->stadiumBox->currentText().toStdString();
+    string roof = ui->roofBox->currentText().toStdString();
+    string surface = ui->surfaceBox->currentText().toStdString();
+    string location = ui->locationBox->currentText().toStdString();
+
     // Clear the filteredData vector
     filteredData.clear();
-    filterData();
+
+    // Loop through teamData vector and add to filteredData vector
+    for (int i = 0; i < (int)teamData.size(); i++)
+    {
+        if (QString::fromStdString(teamData[i].getTeamName()).contains(ui->teamNameBox->text(), Qt::CaseInsensitive) && 
+            teamData[i].getDivision() == division && teamData[i].getStadiumName() == stadium && teamData[i].getRoofType() == roof && 
+            teamData[i].getSurfaceType() == surface && teamData[i].getLocation().find(location) != std::string::npos)
+        {
+            filteredData.push_back(teamData[i]);
+        }
+    }
 }
 
 
@@ -79,26 +95,5 @@ void FilterWindow::setupLocationComboBox()
     for (int i = 0; i < 50; i++)
     {
         ui->locationBox->addItem(QString::fromStdString(states[i]));
-    }
-}
-
-
-void FilterWindow::filterData()
-{
-    string division = ui->divisionBox->currentText().toStdString();
-    string stadium = ui->stadiumBox->currentText().toStdString();
-    string roof = ui->roofBox->currentText().toStdString();
-    string surface = ui->surfaceBox->currentText().toStdString();
-    string location = ui->locationBox->currentText().toStdString();
-
-    // Loop through teamData vector and add to filteredData vector
-    for (int i = 0; i < (int)teamData.size(); i++)
-    {
-        if (QString::fromStdString(teamData[i].getTeamName()).contains(ui->teamNameBox->text(), Qt::CaseInsensitive) && 
-            teamData[i].getDivision() == division && teamData[i].getStadiumName() == stadium && teamData[i].getRoofType() == roof && 
-            teamData[i].getSurfaceType() == surface && teamData[i].getLocation().find(location) != std::string::npos)
-        {
-            filteredData.push_back(teamData[i]);
-        }
     }
 }
