@@ -7,16 +7,14 @@
 #include "filterwindow.h"
 #include "contactwindow.h"
 #include "adminwindow.h"
-#include "teamdata.h"
-
-using namespace NFLData;
+#include "displaydata.h"
 
 namespace Ui 
 {
     class MainWindow;
 }
 
-class MainWindow : public QWidget
+class MainWindow : public QWidget, public DisplayData
 {
     Q_OBJECT
 
@@ -28,26 +26,21 @@ class MainWindow : public QWidget
         ContactWindow *contactWindow;
         AdminWindow *adminWindow;
 
-        vector<TeamData> teamData;
-        vector<TeamData> filteredTeamData;
-
         void setupTable();
         void displayTable(vector<TeamData> &);
 
     private slots:
         void on_filterButton_clicked();
-
         void on_helpButton_clicked();
-
         void on_contactButton_clicked();
-
         void on_loginButton_clicked();
-
         void on_refreshButton_clicked();
 
     public:
         explicit MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
+
+        
 };
 
 #endif // MAINWINDOW_H

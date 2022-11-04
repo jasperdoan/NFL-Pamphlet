@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>865</width>
-    <height>315</height>
+    <height>317</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -126,7 +126,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="comboBox">
+             <widget class="QComboBox" name="divisionBox">
               <item>
                <property name="text">
                 <string>None</string>
@@ -182,7 +182,7 @@
                </widget>
               </item>
               <item row="3" column="0">
-               <widget class="QComboBox" name="stadiumBox">
+               <widget class="QComboBox" name="roofBox">
                 <item>
                  <property name="text">
                   <string>None</string>
@@ -191,7 +191,7 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QComboBox" name="comboBox_2">
+               <widget class="QComboBox" name="stadiumBox">
                 <item>
                  <property name="text">
                   <string>None</string>
@@ -215,7 +215,7 @@
                </widget>
               </item>
               <item row="5" column="0">
-               <widget class="QComboBox" name="comboBox_3">
+               <widget class="QComboBox" name="surfaceBox">
                 <item>
                  <property name="text">
                   <string>None</string>

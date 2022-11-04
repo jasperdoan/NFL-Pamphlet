@@ -2,18 +2,25 @@
 #define FILTERWINDOW_H
 
 #include <QDialog>
+#include <vector>
+#include "displaydata.h"
 
-namespace Ui {
-class FilterWindow;
+namespace Ui 
+{
+    class FilterWindow;
 }
 
-class FilterWindow : public QDialog
+class FilterWindow : public QDialog, public DisplayData
 {
     Q_OBJECT
-    
+
     private:
         Ui::FilterWindow *ui;
-        FilterWindow *filterWindow;
+
+        void setupDivisionComboBox();
+        void setupStadiumComboBox();
+        void setupRoofComboBox();
+        void setupSurfaceComboBox();
 
     private slots:
         void on_filterButton_clicked();

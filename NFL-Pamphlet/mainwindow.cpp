@@ -1,21 +1,28 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+
+vector<TeamData> DisplayData::teamData;
+vector<TeamData> DisplayData::filteredData;
+
+
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    NFLData::readData(teamData, "../data/NFL_Information.csv");
-    setupTable();
+    readData(teamData, "../data/NFL_Information.csv");
 
     // Display teamData in the table widget
+    setupTable();
     displayTable(teamData);
 }
+
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 void MainWindow::on_filterButton_clicked()
 {
@@ -65,9 +72,9 @@ void MainWindow::setupTable()
     ui->teamTable->setColumnWidth(1, 200); // Set column width
     ui->teamTable->setColumnWidth(2, 100); // Set column width
     ui->teamTable->setColumnWidth(3, 200); // Set column width
-    ui->teamTable->setColumnWidth(4, 100); // Set column width
+    ui->teamTable->setColumnWidth(4, 200); // Set column width
     ui->teamTable->setColumnWidth(5, 100); // Set column width
-    ui->teamTable->setColumnWidth(6, 200); // Set column width
+    ui->teamTable->setColumnWidth(6, 250); // Set column width
     ui->teamTable->setColumnWidth(7, 100); // Set column width
     ui->teamTable->setColumnWidth(8, 100); // Set column width
     ui->teamTable->setAlternatingRowColors(true); // Set alternating row colors
