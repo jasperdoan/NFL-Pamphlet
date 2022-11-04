@@ -32,6 +32,7 @@ class MainWindow : public QWidget
         vector<TeamData> filteredTeamData;
 
         void setupTable();
+        void displayTable(vector<TeamData> &);
 
     private slots:
         void on_filterButton_clicked();
