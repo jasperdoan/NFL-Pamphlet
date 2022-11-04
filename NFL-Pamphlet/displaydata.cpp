@@ -52,7 +52,7 @@ void DisplayData::readData(vector<TeamData> &teams, const string FILENAME)
             
             // Location
             nextPos = line.find(',', line.find(',', pos) + 1);
-            location = line.substr(pos, nextPos - pos);
+            location = line.substr(pos + 1, nextPos - pos - 2);
             pos = nextPos + 1;
 
             // Conference

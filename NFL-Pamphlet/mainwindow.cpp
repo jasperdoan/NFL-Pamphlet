@@ -28,6 +28,8 @@ void MainWindow::on_filterButton_clicked()
 {
     filterWindow = new FilterWindow(this);              // Create a new FilterWindow object
     filterWindow->show();                               // Show the FilterWindow object
+
+
 }
 
 
@@ -86,6 +88,9 @@ void MainWindow::setupTable()
 
 void MainWindow::displayTable(vector<TeamData> &teamData)
 {
+    // Clear table
+    ui->teamTable->clearContents();
+
     for (int i = 0; i < (int)teamData.size(); i++)
     {
         ui->teamTable->setItem(i, 0, new QTableWidgetItem(QString::fromStdString(teamData[i].getTeamName())));

@@ -17,10 +17,10 @@ class FilterWindow : public QDialog, public DisplayData
     private:
         Ui::FilterWindow *ui;
 
-        void setupDivisionComboBox();
         void setupStadiumComboBox();
         void setupRoofComboBox();
         void setupSurfaceComboBox();
+        void setupLocationComboBox();
 
     private slots:
         void on_filterButton_clicked();
@@ -28,6 +28,8 @@ class FilterWindow : public QDialog, public DisplayData
     public:
         explicit FilterWindow(QWidget *parent = nullptr);
         ~FilterWindow();
+
+        void filterData();
 };
 
 #endif // FILTERWINDOW_H
