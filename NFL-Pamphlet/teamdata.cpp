@@ -83,13 +83,10 @@ void NFLData::readData(vector<TeamData> &teams, const string FILENAME)
 
             // Divison
             strEnum = findStringData();
-            switch (strEnum[0])
-            {
-                case 'N': division = NFLData::NORTH; break;
-                case 'S': division = NFLData::SOUTH; break;
-                case 'E': division = NFLData::EAST; break;
-                case 'W': division = NFLData::WEST; break;
-            }
+            if (strEnum.find("North") != string::npos) { division = NFLData::NORTH; }
+            else if (strEnum.find("South") != string::npos) { division = NFLData::SOUTH; }
+            else if (strEnum.find("East") != string::npos) { division = NFLData::EAST; }
+            else if (strEnum.find("West") != string::npos) { division = NFLData::WEST; }
 
             // Surface type
             surfaceType = findStringData();
