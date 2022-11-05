@@ -57,10 +57,13 @@ void MainWindow::on_loginButton_clicked()
 void MainWindow::on_refreshButton_clicked()
 {
     ui->teamTable->clearContents();
-    ui->teamTable->setSortingEnabled(false); // disable sorting of table
+    ui->teamTable->setSortingEnabled(false);    // Disable sorting of table
 
     displayTable(filteredData);
-    ui->teamTable->setSortingEnabled(true); // Enable sorting of table
+
+    ui->teamTable->setSortingEnabled(true);     // Enable sorting of table
+
+    filteredData = teamData;
 }
 
 void MainWindow::on_dropdownBox_clicked()
