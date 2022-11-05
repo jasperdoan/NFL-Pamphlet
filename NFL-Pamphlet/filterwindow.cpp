@@ -22,15 +22,23 @@ void FilterWindow::on_filterButton_clicked()
     string surface = ui->surfaceBox->currentText().toStdString();
     string location = ui->locationBox->currentText().toStdString();
 
+    bool emptyTextBox = ui->teamNameBox->text().isEmpty();
+    bool containStr, isDiv, isStad, isRoof, isSurf, isLoc;
+
     // Clear the filteredData vector
     filteredData.clear();
 
     // Loop through teamData vector and add to filteredData vector
     for (int i = 0; i < (int)teamData.size(); i++)
     {
-        if (QString::fromStdString(teamData[i].getTeamName()).contains(ui->teamNameBox->text(), Qt::CaseInsensitive) && 
-            teamData[i].getDivision() == division && teamData[i].getStadiumName() == stadium && teamData[i].getRoofType() == roof && 
-            teamData[i].getSurfaceType() == surface && teamData[i].getLocation().find(location) != std::string::npos)
+        containStr = !emptyTextBox   || QString::fromStdString(teamData[i].getTeamName()).contains(ui->teamNameBox->text(), Qt::CaseInsensitive);
+        isDiv      = division == "-" || teamData[i].getDivision() == division;
+        isStad     = stadium  == "-" || teamData[i].getStadiumName() == stadium;
+        isRoof     = roof     == "-" || teamData[i].getRoofType() == roof;
+        isSurf     = surface  == "-" || teamData[i].getSurfaceType() == surface;
+        isLoc      = location == "-" || teamData[i].getLocation().find(location) != std::string::npos;
+        
+        if (containStr && isDiv && isStad && isRoof && isSurf && isLoc)
         {
             filteredData.push_back(teamData[i]);
         }

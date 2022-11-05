@@ -95,6 +95,11 @@
               </property>
               <item>
                <property name="text">
+                <string>-</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
                 <string>National Football Conference</string>
                </property>
               </item>
@@ -122,6 +127,11 @@
             </item>
             <item>
              <widget class="QComboBox" name="divisionBox">
+              <item>
+               <property name="text">
+                <string>-</string>
+               </property>
+              </item>
               <item>
                <property name="text">
                 <string>North</string>
@@ -162,7 +172,13 @@
              </property>
              <layout class="QGridLayout" name="gridLayout_3">
               <item row="3" column="0">
-               <widget class="QComboBox" name="roofBox"/>
+               <widget class="QComboBox" name="roofBox">
+                <item>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </item>
+               </widget>
               </item>
               <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignBottom">
                <widget class="QLabel" name="label_3">
@@ -210,10 +226,22 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QComboBox" name="stadiumBox"/>
+               <widget class="QComboBox" name="stadiumBox">
+                <item>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </item>
+               </widget>
               </item>
               <item row="5" column="0">
-               <widget class="QComboBox" name="surfaceBox"/>
+               <widget class="QComboBox" name="surfaceBox">
+                <item>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </item>
+               </widget>
               </item>
               <item row="6" column="0">
                <widget class="QLabel" name="label_5">
@@ -231,7 +259,13 @@
                </widget>
               </item>
               <item row="7" column="0">
-               <widget class="QComboBox" name="locationBox"/>
+               <widget class="QComboBox" name="locationBox">
+                <item>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </item>
+               </widget>
               </item>
              </layout>
             </widget>
