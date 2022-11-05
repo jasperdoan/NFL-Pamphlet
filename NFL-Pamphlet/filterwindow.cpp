@@ -1,5 +1,6 @@
 #include "filterwindow.h"
 #include "ui_filterwindow.h"
+#include "mainwindow.h"
 
 
 FilterWindow::FilterWindow(QWidget *parent) : QDialog(parent), ui(new Ui::FilterWindow)
@@ -11,6 +12,10 @@ FilterWindow::FilterWindow(QWidget *parent) : QDialog(parent), ui(new Ui::Filter
     setupRoofComboBox();
     setupSurfaceComboBox();
     setupLocationComboBox();
+
+
+    MainWindow *mainwindow;
+	connect(ui->filterButton, &QPushButton::clicked, mainwindow, &MainWindow::filterRefresh);
 }
 
 

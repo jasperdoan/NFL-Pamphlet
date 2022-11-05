@@ -28,6 +28,10 @@ class MainWindow : public QWidget, public DisplayData
 
         void setupTable();
         void displayTable(vector<TeamData> &);
+    
+    public slots:
+        void filterRefresh();
+
 
     private slots:
         void on_filterButton_clicked();
