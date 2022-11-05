@@ -59,8 +59,13 @@ void MainWindow::on_refreshButton_clicked()
     ui->teamTable->clearContents();
     ui->teamTable->setSortingEnabled(false); // disable sorting of table
 
-    displayTable(teamData);
+    displayTable(filteredData);
     ui->teamTable->setSortingEnabled(true); // Enable sorting of table
+}
+
+void MainWindow::on_dropdownBox_clicked()
+{
+    // calc total seat capacity for original & updated list
 }
 
 
@@ -107,9 +112,4 @@ void MainWindow::displayTable(vector<TeamData> &teamData)
         ui->teamTable->setItem(i, 7, new QTableWidgetItem(QString::fromStdString(teamData[i].getRoofType())));
         ui->teamTable->setItem(i, 8, new QTableWidgetItem(QString::fromStdString(to_string(teamData[i].getYearOpened()))));
     }
-}
-
-
-void MainWindow::filterRefresh(){  
-    displayTable(filteredData);
 }
