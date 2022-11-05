@@ -16,6 +16,7 @@ FilterWindow::FilterWindow(QWidget *parent) : QDialog(parent), ui(new Ui::Filter
 
 void FilterWindow::on_filterButton_clicked()
 {
+    string conference = ui->conferenceBox->currentText().toStdString();
     string division = ui->divisionBox->currentText().toStdString();
     string stadium = ui->stadiumBox->currentText().toStdString();
     string roof = ui->roofBox->currentText().toStdString();
@@ -23,7 +24,7 @@ void FilterWindow::on_filterButton_clicked()
     string location = ui->locationBox->currentText().toStdString();
 
     bool emptyTextBox = ui->teamNameBox->text().isEmpty();
-    bool containStr, isDiv, isStad, isRoof, isSurf, isLoc;
+    bool containStr, isCof, isDiv, isStad, isRoof, isSurf, isLoc;
 
     // Clear the filteredData vector
     filteredData.clear();
@@ -31,14 +32,15 @@ void FilterWindow::on_filterButton_clicked()
     // Loop through teamData vector and add to filteredData vector
     for (int i = 0; i < (int)teamData.size(); i++)
     {
-        containStr = !emptyTextBox   || QString::fromStdString(teamData[i].getTeamName()).contains(ui->teamNameBox->text(), Qt::CaseInsensitive);
-        isDiv      = division == "-" || teamData[i].getDivision() == division;
-        isStad     = stadium  == "-" || teamData[i].getStadiumName() == stadium;
-        isRoof     = roof     == "-" || teamData[i].getRoofType() == roof;
-        isSurf     = surface  == "-" || teamData[i].getSurfaceType() == surface;
-        isLoc      = location == "-" || teamData[i].getLocation().find(location) != std::string::npos;
+        containStr = emptyTextBox      || QString::fromStdString(teamData[i].getTeamName()).contains(ui->teamNameBox->text(), Qt::CaseInsensitive);
+        isCof      = conference == "-" || teamData[i].getConference() == conference;
+        isDiv      = division   == "-" || teamData[i].getDivision() == division;
+        isStad     = stadium    == "-" || teamData[i].getStadiumName() == stadium;
+        isRoof     = roof       == "-" || teamData[i].getRoofType() == roof;
+        isSurf     = surface    == "-" || teamData[i].getSurfaceType() == surface;
+        isLoc      = location   == "-" || teamData[i].getLocation().find(location) != std::string::npos;
         
-        if (containStr && isDiv && isStad && isRoof && isSurf && isLoc)
+        if (containStr && isCof && isDiv && isStad && isRoof && isSurf && isLoc)
         {
             filteredData.push_back(teamData[i]);
         }
