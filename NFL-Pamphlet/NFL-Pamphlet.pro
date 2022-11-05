@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     adminwindow.cpp \
     contactwindow.cpp \
+    displaydata.cpp \
     filterwindow.cpp \
     helpwindow.cpp \
     main.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     adminwindow.h \
     contactwindow.h \
+    displaydata.h \
     filterwindow.h \
     helpwindow.h \
     mainwindow.h \

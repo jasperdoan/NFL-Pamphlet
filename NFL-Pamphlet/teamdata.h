@@ -41,8 +41,6 @@ namespace NFLData
             string getRoofType();
             int getYearOpened();
     };
-
-    void readData(vector<TeamData> &, const string );
 };
 
 #endif
