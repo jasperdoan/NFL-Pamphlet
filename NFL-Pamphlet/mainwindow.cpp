@@ -108,8 +108,3 @@ void MainWindow::displayTable(vector<TeamData> &teamData)
         ui->teamTable->setItem(i, 8, new QTableWidgetItem(QString::fromStdString(to_string(teamData[i].getYearOpened()))));
     }
 }
-
-
-void MainWindow::filterRefresh(){  
-    displayTable(filteredData);
-}
