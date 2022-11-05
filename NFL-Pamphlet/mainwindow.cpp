@@ -56,7 +56,7 @@ void MainWindow::on_loginButton_clicked()
 
 void MainWindow::on_refreshButton_clicked()
 {
-    displayTable(teamData);
+    displayTable(filteredData);
 }
 
 
