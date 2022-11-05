@@ -10,13 +10,13 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 {
     ui->setupUi(this);
 
+    // Read data & update both vectors
     readData(teamData, "../data/NFL_Information.csv");
+    filteredData = teamData;
 
     // Display teamData in the table widget
     setupTable();
     displayTable(teamData);
-
-
 }
 
 
@@ -59,7 +59,7 @@ void MainWindow::on_refreshButton_clicked()
     ui->teamTable->clearContents();
     ui->teamTable->setSortingEnabled(false); // disable sorting of table
 
-    displayTable(filteredData);
+    displayTable(teamData);
     ui->teamTable->setSortingEnabled(true); // Enable sorting of table
 }
 
