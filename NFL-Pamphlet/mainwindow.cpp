@@ -56,7 +56,11 @@ void MainWindow::on_loginButton_clicked()
 
 void MainWindow::on_refreshButton_clicked()
 {
-    displayTable(filteredData);
+    ui->teamTable->clearContents();
+    ui->teamTable->setSortingEnabled(false); // disable sorting of table
+
+    displayTable(teamData);
+    ui->teamTable->setSortingEnabled(true); // Enable sorting of table
 }
 
 
@@ -74,9 +78,9 @@ void MainWindow::setupTable()
     ui->teamTable->setColumnWidth(1, 200); // Set column width
     ui->teamTable->setColumnWidth(2, 100); // Set column width
     ui->teamTable->setColumnWidth(3, 200); // Set column width
-    ui->teamTable->setColumnWidth(4, 200); // Set column width
+    ui->teamTable->setColumnWidth(4, 250); // Set column width
     ui->teamTable->setColumnWidth(5, 100); // Set column width
-    ui->teamTable->setColumnWidth(6, 250); // Set column width
+    ui->teamTable->setColumnWidth(6, 350); // Set column width
     ui->teamTable->setColumnWidth(7, 100); // Set column width
     ui->teamTable->setColumnWidth(8, 100); // Set column width
     ui->teamTable->setAlternatingRowColors(true); // Set alternating row colors
