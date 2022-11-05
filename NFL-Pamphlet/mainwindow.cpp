@@ -59,6 +59,11 @@ void MainWindow::on_refreshButton_clicked()
     displayTable(filteredData);
 }
 
+void MainWindow::on_dropdownBox_clicked()
+{
+    // calc total seat capacity for original & updated list
+}
+
 
 void MainWindow::setupTable()
 {

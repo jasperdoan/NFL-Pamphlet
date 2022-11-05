@@ -35,6 +35,7 @@ class MainWindow : public QWidget, public DisplayData
         void on_contactButton_clicked();
         void on_loginButton_clicked();
         void on_refreshButton_clicked();
+        void on_dropdownBox_clicked();
 
     public:
         explicit MainWindow(QWidget *parent = nullptr);
