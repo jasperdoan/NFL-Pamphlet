@@ -172,18 +172,7 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QComboBox" name="dropdownBox">
-             <item>
-              <property name="text">
-               <string>Original</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Updated</string>
-              </property>
-             </item>
-            </widget>
+            <widget class="QComboBox" name="listBox"/>
            </item>
            <item>
             <widget class="QLineEdit" name="capacityNum">

@@ -28,14 +28,18 @@ class MainWindow : public QWidget, public DisplayData
 
         void setupTable();
         void displayTable(vector<TeamData> &);
+        void setupListComboBox();
 
+       
     private slots:
         void on_filterButton_clicked();
         void on_helpButton_clicked();
         void on_contactButton_clicked();
         void on_loginButton_clicked();
         void on_refreshButton_clicked();
-        void on_dropdownBox_clicked();
+        void indexChanged();
+
+        
 
     public:
         explicit MainWindow(QWidget *parent = nullptr);

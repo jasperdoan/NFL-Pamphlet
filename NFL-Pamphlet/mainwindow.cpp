@@ -3,6 +3,7 @@
 
 
 vector<TeamData> DisplayData::teamData;
+vector<TeamData> DisplayData::originalData;
 vector<TeamData> DisplayData::filteredData;
 
 
@@ -11,12 +12,18 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
     ui->setupUi(this);
 
     // Read data & update both vectors
+    readData(originalData, "../data/updated_NFL_Information.csv");
     readData(teamData, "../data/NFL_Information.csv");
     filteredData = teamData;
 
     // Display teamData in the table widget
     setupTable();
     displayTable(teamData);
+
+    setupListComboBox();
+
+    // connect(ui->listBox, SIGNAL(currentIndexChanged(const QString&)), this, SLOT(indexChanged()));QString::fromStdString((const string){"Updated"})
+
 }
 
 
@@ -35,8 +42,9 @@ void MainWindow::on_filterButton_clicked()
 
 void MainWindow::on_helpButton_clicked()
 {
-    helpWindow = new HelpWindow(this);                  // Create a new HelpWindow object
-    helpWindow->show();                                 // Show the HelpWindow object
+    // helpWindow = new HelpWindow(this);                  // Create a new HelpWindow object
+    // helpWindow->show();                                 // Show the HelpWindow object
+    indexChanged();
 }
 
 
@@ -50,7 +58,7 @@ void MainWindow::on_contactButton_clicked()
 void MainWindow::on_loginButton_clicked()
 {
     adminWindow = new AdminWindow(this);                // Create a new AdminWindow object
-    adminWindow->show();                                // Show the AdminWindow object                  
+    adminWindow->show();                                // Show the AdminWindow object                
 }
 
 
@@ -66,10 +74,6 @@ void MainWindow::on_refreshButton_clicked()
     filteredData = teamData;
 }
 
-void MainWindow::on_dropdownBox_clicked()
-{
-    // calc total seat capacity for original & updated list
-}
 
 
 void MainWindow::setupTable()
@@ -115,4 +119,29 @@ void MainWindow::displayTable(vector<TeamData> &teamData)
         ui->teamTable->setItem(i, 7, new QTableWidgetItem(QString::fromStdString(teamData[i].getRoofType())));
         ui->teamTable->setItem(i, 8, new QTableWidgetItem(QString::fromStdString(to_string(teamData[i].getYearOpened()))));
     }
+}
+
+
+void MainWindow::setupListComboBox()
+{
+    ui->listBox->addItem(QString::fromStdString((const string){"Original"}));
+    ui->listBox->addItem(QString::fromStdString((const string){"Updated"}));
+}
+
+void MainWindow::indexChanged()
+{
+    if (ui->listBox->currentText().toStdString() == "Updated")
+    {
+        readData(teamData, "../data/updated_NFL_Information.csv");
+    }
+    else
+    {
+        readData(teamData, "../data/NFL_Information.csv");
+    }      
+
+    ui->teamTable->clearContents();
+    ui->teamTable->setSortingEnabled(false);    // Disable sorting of table
+    displayTable(teamData);
+    ui->teamTable->setSortingEnabled(true);     // Enable sorting of table
+
 }

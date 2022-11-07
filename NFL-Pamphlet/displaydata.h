@@ -9,6 +9,7 @@ class DisplayData
 {
     protected:
         static vector<TeamData> teamData;
+        static vector<TeamData> originalData;
         static vector<TeamData> filteredData;
     
     public:
