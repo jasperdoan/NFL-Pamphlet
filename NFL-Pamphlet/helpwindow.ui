@@ -1,17 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>HelpWindow</class>
- <widget name="HelpWindow" class="QDialog">
+ <widget class="QDialog" name="HelpWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>470</width>
+    <height>360</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>121</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="plainText">
+    <string>How to use and Navigate the NFL Pamphlet</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
