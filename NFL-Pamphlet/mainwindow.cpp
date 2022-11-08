@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 {
     ui->setupUi(this);
 
+    ui->dropdownBox->addItem("Original");
+    ui->dropdownBox->addItem("Updated");
+
     // Read data & update both vectors
     readData(teamData, "../data/NFL_Information.csv");
     filteredData = teamData;
@@ -70,6 +73,8 @@ void MainWindow::on_dropdownBox_activated()
 {
     int totalSeatCap;
     totalSeatCap = 0;
+
+//    ui->totalCapacityNum->clear();
 
     if (ui->dropdownBox->currentText() == "Original")
     {
