@@ -11,6 +11,8 @@ FilterWindow::FilterWindow(QWidget *parent) : QDialog(parent), ui(new Ui::Filter
     setupRoofComboBox();
     setupSurfaceComboBox();
     setupLocationComboBox();
+
+    connect(ui->filterButton, SIGNAL(clicked()), parent, SLOT(on_refreshButton_clicked()));
 }
 
 
