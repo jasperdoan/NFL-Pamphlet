@@ -10,13 +10,14 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 {
     ui->setupUi(this);
 
+    ui->dropdownBox->addItem("Original");
+    ui->dropdownBox->addItem("Updated");
+
     readData(teamData, "../data/NFL_Information.csv");
 
     // Display teamData in the table widget
     setupTable();
     displayTable(teamData);
-
-    dropdownBox();
 }
 
 
@@ -63,14 +64,10 @@ void MainWindow::on_refreshButton_clicked()
     ui->teamTable->setSortingEnabled(true); // Enable sorting of table
 }
 
-void MainWindow::dropdownBox()
+void MainWindow::on_dropdownBox_activated()
 {
     int totalSeatCap;
     totalSeatCap = 0;
-
-    ui->dropdownBox->addItem("Original");
-    ui->dropdownBox->addItem("Updated");
-
 
     if (ui->dropdownBox->currentText() == "Original")
     {
@@ -78,46 +75,23 @@ void MainWindow::dropdownBox()
         {
             totalSeatCap += teamData[i].getCapacity();
         }
+
         totalSeatCap = static_cast<int>(totalSeatCap);
+        ui->totalCapacityNum->setText("Hello");
 //        ui->totalCapacityNum->setText(totalSeatCap);
     }
-    else // updated(?)
+    else if (ui->dropdownBox->currentText() == "Updated")
     {
         for (int i = 0; i < (int)filteredData.size(); i++)
         {
             totalSeatCap += filteredData[i].getCapacity();
         }
+
         totalSeatCap = static_cast<int>(totalSeatCap);
 //        ui->totalCapacityNum->setText(totalSeatCap);
-    }
-
-
+        ui->totalCapacityNum->setText("hi");
+     }
 }
-
-//void MainWindow::on_dropdownBox_clicked()
-//{
-//    int totalSeatCap;
-//    totalSeatCap = 0;
-
-//    if (ui->dropdownBox->currentText() == "Original")
-//    {
-//        for (int i = 0; i < (int)teamData.size(); i++)
-//        {
-//            totalSeatCap += teamData[i].getCapacity();
-//        }
-//        totalSeatCap = static_cast<int>(totalSeatCap);
-////        ui->totalCapacityNum->setText(totalSeatCap);
-//    }
-//    else // updated(?)
-//    {
-//        for (int i = 0; i < (int)filteredData.size(); i++)
-//        {
-//            totalSeatCap += filteredData[i].getCapacity();
-//        }
-//        totalSeatCap = static_cast<int>(totalSeatCap);
-////        ui->totalCapacityNum->setText(totalSeatCap);
-//    }
-//}
 
 void MainWindow::setupTable()
 {
