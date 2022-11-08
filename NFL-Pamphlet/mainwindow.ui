@@ -87,7 +87,6 @@
          <property name="font">
           <font>
            <pointsize>21</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -173,12 +172,26 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QComboBox" name="dropdownBox"/>
+            <widget class="QComboBox" name="dropdownBox">
+             <item>
+              <property name="text">
+               <string>Original</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Updated</string>
+              </property>
+             </item>
+            </widget>
            </item>
            <item>
-            <widget class="QLabel" name="totalCapacityNum">
-             <property name="text">
-              <string/>
+            <widget class="QLineEdit" name="capacityNum">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
              </property>
             </widget>
            </item>
