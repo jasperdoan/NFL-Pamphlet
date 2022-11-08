@@ -87,6 +87,7 @@
          <property name="font">
           <font>
            <pointsize>21</pointsize>
+           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
@@ -186,12 +187,9 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="capacityNum">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+            <widget class="QLabel" name="totalCapacityNum">
+             <property name="text">
+              <string/>
              </property>
             </widget>
            </item>
