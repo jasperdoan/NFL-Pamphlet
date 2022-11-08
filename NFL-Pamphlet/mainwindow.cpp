@@ -102,7 +102,10 @@ void MainWindow::dropdownBox()
         {
             totalSeatCap += teamData[i].getCapacity();
         }
-        ui->totalCapacityNum->setNum(totalSeatCap); // display og list total seats
+
+
+//       ui->totalCapacityNum->setText(totalSeatCap);
+        ui->totalCapacityNum->setNum(totalSeatCap);
     }
     else // updated(?)
     {
@@ -110,8 +113,8 @@ void MainWindow::dropdownBox()
         {
             totalSeatCap += filteredData[i].getCapacity();
         }
-          
-          ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
+//        ui->totalCapacityNum->setText("hi");
+          ui->totalCapacityNum->setNum(totalSeatCap);
      }
 }
 
