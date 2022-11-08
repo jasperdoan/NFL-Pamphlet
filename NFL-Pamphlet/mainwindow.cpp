@@ -76,9 +76,8 @@ void MainWindow::on_dropdownBox_activated()
             totalSeatCap += teamData[i].getCapacity();
         }
 
-        totalSeatCap = static_cast<int>(totalSeatCap);
-        ui->totalCapacityNum->setText("Hello");
-//        ui->totalCapacityNum->setText(totalSeatCap);
+//       ui->totalCapacityNum->setText(totalSeatCap);
+        ui->totalCapacityNum->setNum(totalSeatCap);
     }
     else if (ui->dropdownBox->currentText() == "Updated")
     {
@@ -87,9 +86,8 @@ void MainWindow::on_dropdownBox_activated()
             totalSeatCap += filteredData[i].getCapacity();
         }
 
-        totalSeatCap = static_cast<int>(totalSeatCap);
-//        ui->totalCapacityNum->setText(totalSeatCap);
-        ui->totalCapacityNum->setText("hi");
+//        ui->totalCapacityNum->setText("hi");
+          ui->totalCapacityNum->setNum(totalSeatCap);
      }
 }
 
