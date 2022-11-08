@@ -11,9 +11,13 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
     ui->setupUi(this);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui->dropdownBox->addItem("Original");
     ui->dropdownBox->addItem("Updated");
 
+=======
+    // Read data & update both vectors
+>>>>>>> main
 =======
     // Read data & update both vectors
 >>>>>>> main
@@ -67,12 +71,23 @@ void MainWindow::on_refreshButton_clicked()
 
     displayTable(filteredData);
 <<<<<<< HEAD
+<<<<<<< HEAD
     ui->teamTable->setSortingEnabled(true); // Enable sorting of table
 =======
+=======
+>>>>>>> main
 
     ui->teamTable->setSortingEnabled(true);     // Enable sorting of table
 
     filteredData = teamData;
+<<<<<<< HEAD
+=======
+}
+
+void MainWindow::on_dropdownBox_clicked()
+{
+    // calc total seat capacity for original & updated list
+>>>>>>> main
 }
 
 void MainWindow::on_dropdownBox_clicked()
