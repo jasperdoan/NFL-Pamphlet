@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
     setupTable();
     displayTable(teamData);
 
-
+    dropdownBox();
 }
 
 
@@ -63,19 +63,23 @@ void MainWindow::on_refreshButton_clicked()
     ui->teamTable->setSortingEnabled(true); // Enable sorting of table
 }
 
-void MainWindow::on_dropdownBox_clicked()
+void MainWindow::dropdownBox()
 {
     int totalSeatCap;
     totalSeatCap = 0;
 
-    // calc total seat capacity for original & updated list
-    if (ui->dropdownBox->findText("Original"))
+    ui->dropdownBox->addItem("Original");
+    ui->dropdownBox->addItem("Updated");
+
+
+    if (ui->dropdownBox->currentText() == "Original")
     {
         for (int i = 0; i < (int)teamData.size(); i++)
         {
             totalSeatCap += teamData[i].getCapacity();
         }
-        ui->capacityNum->setText(totalSeatCap);
+        totalSeatCap = static_cast<int>(totalSeatCap);
+//        ui->totalCapacityNum->setText(totalSeatCap);
     }
     else // updated(?)
     {
@@ -83,10 +87,37 @@ void MainWindow::on_dropdownBox_clicked()
         {
             totalSeatCap += filteredData[i].getCapacity();
         }
-        ui->capacityNum->setText(totalSeatCap);
+        totalSeatCap = static_cast<int>(totalSeatCap);
+//        ui->totalCapacityNum->setText(totalSeatCap);
     }
+
+
 }
 
+//void MainWindow::on_dropdownBox_clicked()
+//{
+//    int totalSeatCap;
+//    totalSeatCap = 0;
+
+//    if (ui->dropdownBox->currentText() == "Original")
+//    {
+//        for (int i = 0; i < (int)teamData.size(); i++)
+//        {
+//            totalSeatCap += teamData[i].getCapacity();
+//        }
+//        totalSeatCap = static_cast<int>(totalSeatCap);
+////        ui->totalCapacityNum->setText(totalSeatCap);
+//    }
+//    else // updated(?)
+//    {
+//        for (int i = 0; i < (int)filteredData.size(); i++)
+//        {
+//            totalSeatCap += filteredData[i].getCapacity();
+//        }
+//        totalSeatCap = static_cast<int>(totalSeatCap);
+////        ui->totalCapacityNum->setText(totalSeatCap);
+//    }
+//}
 
 void MainWindow::setupTable()
 {
