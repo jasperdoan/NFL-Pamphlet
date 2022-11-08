@@ -65,7 +65,26 @@ void MainWindow::on_refreshButton_clicked()
 
 void MainWindow::on_dropdownBox_clicked()
 {
+    int totalSeatCap;
+    totalSeatCap = 0;
+
     // calc total seat capacity for original & updated list
+    if (ui->dropdownBox->findText("Original"))
+    {
+        for (int i = 0; i < (int)teamData.size(); i++)
+        {
+            totalSeatCap += teamData[i].getCapacity();
+        }
+        ui->capacityNum->setText(totalSeatCap);
+    }
+    else // updated(?)
+    {
+        for (int i = 0; i < (int)filteredData.size(); i++)
+        {
+            totalSeatCap += filteredData[i].getCapacity();
+        }
+        ui->capacityNum->setText(totalSeatCap);
+    }
 }
 
 
