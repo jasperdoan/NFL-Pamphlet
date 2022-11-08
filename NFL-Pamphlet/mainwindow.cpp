@@ -10,13 +10,13 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 {
     ui->setupUi(this);
 
-    // Read data & update both vectors
     readData(teamData, "../data/NFL_Information.csv");
     filteredData = teamData;
 
     // Display teamData in the table widget
     setupTable();
     displayTable(teamData);
+    
 }
 
 
@@ -60,17 +60,48 @@ void MainWindow::on_refreshButton_clicked()
     ui->teamTable->setSortingEnabled(false);    // Disable sorting of table
 
     displayTable(filteredData);
+<<<<<<< HEAD
+<<<<<<< HEAD
+    ui->teamTable->setSortingEnabled(true); // Enable sorting of table
+=======
+=======
+>>>>>>> main
 
     ui->teamTable->setSortingEnabled(true);     // Enable sorting of table
 
     filteredData = teamData;
+<<<<<<< HEAD
+=======
 }
 
-void MainWindow::on_dropdownBox_clicked()
+void MainWindow::on_dropdownBox_activated()
 {
-    // calc total seat capacity for original & updated list
-}
+    int totalSeatCap;
+    totalSeatCap = 0;
 
+    if (ui->dropdownBox->currentText() == "Original")
+    {
+        for (int i = 0; i < (int)teamData.size(); i++)
+        {
+            totalSeatCap += teamData[i].getCapacity();
+        }
+
+        totalSeatCap = static_cast<int>(totalSeatCap);
+        ui->totalCapacityNum->setText("Hello");
+//        ui->totalCapacityNum->setText(totalSeatCap);
+    }
+    else if (ui->dropdownBox->currentText() == "Updated")
+    {
+        for (int i = 0; i < (int)filteredData.size(); i++)
+        {
+            totalSeatCap += filteredData[i].getCapacity();
+        }
+
+        totalSeatCap = static_cast<int>(totalSeatCap);
+//        ui->totalCapacityNum->setText(totalSeatCap);
+        ui->totalCapacityNum->setText("hi");
+     }
+}
 
 void MainWindow::setupTable()
 {
