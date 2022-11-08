@@ -90,34 +90,6 @@ void MainWindow::on_dropdownBox_clicked()
 >>>>>>> main
 }
 
-void MainWindow::on_dropdownBox_clicked()
-{
-    // calc total seat capacity for original & updated list
->>>>>>> main
-}
-
-void MainWindow::on_dropdownBox_activated()
-{
-    int totalSeatCap;
-    totalSeatCap = 0;
-
-    if (ui->dropdownBox->currentText() == "Original")
-    {
-        for (int i = 0; i < (int)teamData.size(); i++)
-        {
-            totalSeatCap += teamData[i].getCapacity();
-        }
-        ui->totalCapacityNum->setNum(totalSeatCap); // display og list total seats
-    }
-    else if (ui->dropdownBox->currentText() == "Updated")
-    {
-        for (int i = 0; i < (int)filteredData.size(); i++)
-        {
-            totalSeatCap += filteredData[i].getCapacity();
-        }
-          ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
-     }
-}
 
 void MainWindow::setupTable()
 {
