@@ -10,26 +10,13 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow
 {
     ui->setupUi(this);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ui->dropdownBox->addItem("Original");
-    ui->dropdownBox->addItem("Updated");
-
-=======
-    // Read data & update both vectors
->>>>>>> main
-=======
-    // Read data & update both vectors
->>>>>>> main
     readData(teamData, "../data/NFL_Information.csv");
     filteredData = teamData;
 
     // Display teamData in the table widget
     setupTable();
     displayTable(teamData);
-
-
-    dropdownBox();
+    
 }
 
 
@@ -87,67 +74,6 @@ void MainWindow::on_refreshButton_clicked()
 =======
 }
 
-void MainWindow::dropdownBox()
-{
-    int totalSeatCap;
-    totalSeatCap = 0;
-
-    ui->dropdownBox->addItem("Original");
-    ui->dropdownBox->addItem("Updated");
-
-
-    if (ui->dropdownBox->currentText() == "Original")
-    {
-        for (int i = 0; i < (int)teamData.size(); i++)
-        {
-            totalSeatCap += teamData[i].getCapacity();
-        }
-
-
-//       ui->totalCapacityNum->setText(totalSeatCap);
-        ui->totalCapacityNum->setNum(totalSeatCap);
-    }
-    else // updated(?)
-    {
-        for (int i = 0; i < (int)filteredData.size(); i++)
-        {
-            totalSeatCap += filteredData[i].getCapacity();
-        }
-//        ui->totalCapacityNum->setText("hi");
-          ui->totalCapacityNum->setNum(totalSeatCap);
-     }
-}
-
-//void MainWindow::on_dropdownBox_clicked()
-//{
-//    int totalSeatCap;
-//    totalSeatCap = 0;
-
-//    if (ui->dropdownBox->currentText() == "Original")
-//    {
-//        for (int i = 0; i < (int)teamData.size(); i++)
-//        {
-//            totalSeatCap += teamData[i].getCapacity();
-//        }
-//        totalSeatCap = static_cast<int>(totalSeatCap);
-////        ui->totalCapacityNum->setText(totalSeatCap);
-//    }
-//    else // updated(?)
-//    {
-//        for (int i = 0; i < (int)filteredData.size(); i++)
-//        {
-//            totalSeatCap += filteredData[i].getCapacity();
-//        }
-//        totalSeatCap = static_cast<int>(totalSeatCap);
-////        ui->totalCapacityNum->setText(totalSeatCap);
-//    }
-//}
-void MainWindow::on_dropdownBox_clicked()
-{
-    // calc total seat capacity for original & updated list
->>>>>>> main
-}
-
 void MainWindow::on_dropdownBox_activated()
 {
     int totalSeatCap;
@@ -159,7 +85,10 @@ void MainWindow::on_dropdownBox_activated()
         {
             totalSeatCap += teamData[i].getCapacity();
         }
-        ui->totalCapacityNum->setNum(totalSeatCap); // display og list total seats
+
+        totalSeatCap = static_cast<int>(totalSeatCap);
+        ui->totalCapacityNum->setText("Hello");
+//        ui->totalCapacityNum->setText(totalSeatCap);
     }
     else if (ui->dropdownBox->currentText() == "Updated")
     {
@@ -167,7 +96,10 @@ void MainWindow::on_dropdownBox_activated()
         {
             totalSeatCap += filteredData[i].getCapacity();
         }
-          ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
+
+        totalSeatCap = static_cast<int>(totalSeatCap);
+//        ui->totalCapacityNum->setText(totalSeatCap);
+        ui->totalCapacityNum->setText("hi");
      }
 }
 
