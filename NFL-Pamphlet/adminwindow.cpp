@@ -9,6 +9,8 @@ AdminWindow::AdminWindow(QWidget *parent) :
     setAttribute(Qt::WA_DeleteOnClose);
 
     setupRemoveTeamComboBox();
+    connect(ui->addNewTeam, SIGNAL(clicked()), parent, SLOT(onAddButtonClicked()));
+    connect(ui->removeTeam, SIGNAL(clicked()), parent, SLOT(onRemoveButtonClicked()));
 }
 
 AdminWindow::~AdminWindow()
@@ -29,21 +31,35 @@ void AdminWindow::setupRemoveTeamComboBox()
     }
 }
 
+void AdminWindow::on_LoginButton_clicked()
+{
+
+}
+
 void AdminWindow::onAddButtonClicked()
 {
-    string teamName = ui->newTeamName->currentText().toStdString();
-    string stadiumName = ui->newStadiumName->currentText().toStdString();
-    int capacity = ui->newCapacity->currentText().toStdString();
-    string location = ui->newLocation->currentText().toStdString();
-    Conference conference = ui->newConference->currentText().toStdString();
-    Division division = ui->newDivision->currentText().toStdString();
-    string surface = ui->newSurfaceType->currentText().toStdString();
-    RoofType roof = ui->newRoofType->currentText().toStdString();
-    int year = ui->newOpenDate->currentText().toStdString();
+    string teamName = ui->newTeamName->toPlainText().toStdString();
+    string stadiumName = ui->newStadiumName->toPlainText().toStdString();
+    int capacity = ui->newSeatingCapacity->toPlainText().toInt();
+    string location = ui->newLocation->toPlainText().toStdString();
+    Conference conference = ui->newConference->toPlainText();
+    Division division = ui->newDivision->toPlainText();
+    string surface = ui->newSurfaceType->toPlainText().toStdString();
+    RoofType roof = ui->newRoofType->toPlainText();
+    int year = ui->newOpenDate->toPlainText().toInt();
 
-    bool emptyTextBox = ui->newTeamName->text().isEmpty();
+    bool emptyTextBox = ui->newTeamName->toPlainText().isEmpty();
 
-    TeamData.push_back(string teamName, string stadiumName, int capacity, string location, Conference conference, Division division, string surface, RoofType roof, int year);
+    if(emptyTextBox)
+    { }
+    else {
+    teamData.push_back(teamName, stadiumName, capacity, location, conference, division, surface, roof, year);
+    }
+}
+
+void AdminWindow::onRemoveButtonClicked()
+{
+
 }
 /*
             string teamName;
