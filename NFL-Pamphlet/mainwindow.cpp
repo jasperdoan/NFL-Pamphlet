@@ -74,8 +74,6 @@ void MainWindow::on_dropdownBox_activated()
     int totalSeatCap;
     totalSeatCap = 0;
 
-//    ui->totalCapacityNum->clear();
-
     if (ui->dropdownBox->currentText() == "Original")
     {
         for (int i = 0; i < (int)teamData.size(); i++)
