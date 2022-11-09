@@ -24,6 +24,8 @@ private:
 private slots:
     void on_LoginButton_clicked();
     void onAddButtonClicked();
+    void onRemoveButtonClicked();
 };
 
 #endif // ADMINWINDOW_H
+
