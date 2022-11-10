@@ -47,5 +47,36 @@
 				- does not lead to a solution
 					- move on to next row in collumn
 					- if failed every row, backtrack to previous collumn
+					- only need to check left, up left, down left
+
+
+```
+solveNQueens(4);
+
+solveQueens(Board& sharedState){
+	if (solution is found){
+		print(sharedState)
+	}
+	else {
+		for each available move{ 
+			
+			if (move works) {
+				setMove()
+			}	
+			
+			bool nextSOlutionFound =  (recursive call +1){
+			
+			if (nextSOlutionFound){
+				return true;
+			}
+			
+			unsetMove();
+			
+			return false;
+		}
+	}
+}
+
+```
 				
-		- checkSolution(2dArr*)
+# its over
