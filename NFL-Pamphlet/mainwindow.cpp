@@ -69,6 +69,7 @@ void MainWindow::on_refreshButton_clicked()
     filteredData = teamData;
 }
 
+
 void MainWindow::on_dropdownBox_activated()
 {
 //    int totalSeatCap;
@@ -91,25 +92,27 @@ void MainWindow::on_dropdownBox_activated()
 //        ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
 //     }
 
-     auto sumSeatCap = [](vector<TeamData> &anyTeamData)
-     {
-         int totalSeatCap = 0;
+    ui->totalCapacityNum->clear();
 
-         for (int i = 0; i < (int)anyTeamData.size(); i++)
-         {
-             totalSeatCap += anyTeamData[i].getCapacity();
-         }
-         return totalSeatCap;
-     };
+    auto sumSeatCap = [](vector<TeamData> &anyTeamData)
+    {
+        int totalSeatCap = 0;
+
+        for (int i = 0; i < (int)anyTeamData.size(); i++)
+        {
+            totalSeatCap += anyTeamData[i].getCapacity();
+        }
+        return totalSeatCap;
+    };
 
 
     if (ui->dropdownBox->currentText() == "Original")
     {
-      ui->totalCapacityNum->setNum(sumSeatCap(teamData));
+        ui->totalCapacityNum->setNum(sumSeatCap(teamData));
     }
-    else
+    else if (ui->dropdownBox->currentText() == "Updated")
     {
-      ui->totalCapacityNum->setNum(sumSeatCap(filteredData));
+        ui->totalCapacityNum->setNum(sumSeatCap(filteredData));
     }
 }
 
