@@ -10,6 +10,7 @@ class DisplayData
     protected:
         static vector<TeamData> teamData;
         static vector<TeamData> filteredData;
+        static vector<TeamData> currentData;
     
     public:
         void readData(vector<TeamData> &, const string );

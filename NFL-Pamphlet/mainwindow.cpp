@@ -4,6 +4,7 @@
 
 vector<TeamData> DisplayData::teamData;
 vector<TeamData> DisplayData::filteredData;
+vector<TeamData> DisplayData::currentData;
 
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow)
@@ -66,6 +67,7 @@ void MainWindow::on_refreshButton_clicked()
 
     ui->teamTable->setSortingEnabled(true);     // Enable sorting of table
 
+    currentData = filteredData;
     filteredData = teamData;
 }
 
@@ -112,7 +114,7 @@ void MainWindow::on_dropdownBox_activated()
     }
     else if (ui->dropdownBox->currentText() == "Updated")
     {
-        ui->totalCapacityNum->setNum(sumSeatCap(filteredData));
+        ui->totalCapacityNum->setNum(sumSeatCap(currentData));
     }
 }
 
