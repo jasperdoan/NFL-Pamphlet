@@ -39,7 +39,7 @@
 				- good, move on to second collumn
 				- blah blah blah
 
-	- # function structue
+	- #### function structue
 		- findSolution(int boardSize)
 			- places first queen, which leads to 1 of 3 states
 				- leads to a solution
