@@ -91,15 +91,17 @@ void MainWindow::on_dropdownBox_activated()
 //        ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
 //     }
 
-    auto sumSeatCap [] (const vector<TeamData> &anyTeamData)
-    {
-        int totalSeatCap {0};
+     auto sumSeatCap = [](vector<TeamData> &anyTeamData)
+     {
+         int totalSeatCap = 0;
 
-        for (int i = 0; i < (int)anyTeamData.size; i++)
-        {
-            totalSeatCap += anyTeamData.getCapacity();
-        }
-    };
+         for (int i = 0; i < (int)anyTeamData.size(); i++)
+         {
+             totalSeatCap += anyTeamData[i].getCapacity();
+         }
+         return totalSeatCap;
+     };
+
 
     if (ui->dropdownBox->currentText() == "Original")
     {
