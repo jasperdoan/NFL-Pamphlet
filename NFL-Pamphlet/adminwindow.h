@@ -2,13 +2,14 @@
 #define ADMINWINDOW_H
 
 #include <QDialog>
-#include "teamdata.h"
+#include <vector>
+#include "displaydata.h"
 
 namespace Ui {
 class AdminWindow;
 }
 
-class AdminWindow : public QDialog
+class AdminWindow : public QDialog, public DisplayData
 {
     Q_OBJECT
 
@@ -19,11 +20,13 @@ public:
 
 private:
     Ui::AdminWindow *ui;
-    void setupRemoveTeamComboBox();
 
 private slots:
     void on_LoginButton_clicked();
+    void setupRemoveTeamComboBox();
     void onAddButtonClicked();
+    void onRemoveButtonClicked();
 };
 
 #endif // ADMINWINDOW_H
+

@@ -270,7 +270,7 @@
     </property>
    </widget>
   </widget>
-  <widget class="QFrame" name="frame">
+  <widget class="QFrame" name="removeTeamFrame">
    <property name="geometry">
     <rect>
      <x>49</x>
