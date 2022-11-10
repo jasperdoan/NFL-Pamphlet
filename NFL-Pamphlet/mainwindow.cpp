@@ -4,6 +4,7 @@
 
 vector<TeamData> DisplayData::teamData;
 vector<TeamData> DisplayData::filteredData;
+vector<TeamData> DisplayData::currentData;
 
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow)
@@ -66,32 +67,55 @@ void MainWindow::on_refreshButton_clicked()
 
     ui->teamTable->setSortingEnabled(true);     // Enable sorting of table
 
+    currentData = filteredData;
     filteredData = teamData;
 }
 
+
 void MainWindow::on_dropdownBox_activated()
 {
-    int totalSeatCap;
-    totalSeatCap = 0;
+//    int totalSeatCap;
+//    totalSeatCap = 0;
 
-//    ui->totalCapacityNum->clear();
+//    if (ui->dropdownBox->currentText() == "Original")
+//    {
+//        for (int i = 0; i < (int)teamData.size(); i++)
+//        {
+//            totalSeatCap += teamData[i].getCapacity();
+//        }
+//        ui->totalCapacityNum->setNum(totalSeatCap); // display og list total seats
+//    }
+//    else if (ui->dropdownBox->currentText() == "Updated")
+//    {
+//        for (int i = 0; i < (int)filteredData.size(); i++)
+//        {
+//            totalSeatCap += filteredData[i].getCapacity();
+//        }
+//        ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
+//     }
+
+    ui->totalCapacityNum->clear();
+
+    auto sumSeatCap = [](vector<TeamData> &anyTeamData)
+    {
+        int totalSeatCap = 0;
+
+        for (int i = 0; i < (int)anyTeamData.size(); i++)
+        {
+            totalSeatCap += anyTeamData[i].getCapacity();
+        }
+        return totalSeatCap;
+    };
+
 
     if (ui->dropdownBox->currentText() == "Original")
     {
-        for (int i = 0; i < (int)teamData.size(); i++)
-        {
-            totalSeatCap += teamData[i].getCapacity();
-        }
-        ui->totalCapacityNum->setNum(totalSeatCap); // display og list total seats
+        ui->totalCapacityNum->setNum(sumSeatCap(teamData));
     }
     else if (ui->dropdownBox->currentText() == "Updated")
     {
-        for (int i = 0; i < (int)filteredData.size(); i++)
-        {
-            totalSeatCap += filteredData[i].getCapacity();
-        }
-        ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
-     }
+        ui->totalCapacityNum->setNum(sumSeatCap(currentData));
+    }
 }
 
 void MainWindow::setupTable()
