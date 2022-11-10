@@ -9,7 +9,7 @@ namespace Ui {
 class AdminWindow;
 }
 
-class AdminWindow : public QDialog
+class AdminWindow : public QDialog, public DisplayData
 {
     Q_OBJECT
 

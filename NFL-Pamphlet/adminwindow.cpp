@@ -42,19 +42,34 @@ void AdminWindow::onAddButtonClicked()
     string stadiumName = ui->newStadiumName->toPlainText().toStdString();
     int capacity = ui->newSeatingCapacity->toPlainText().toInt();
     string location = ui->newLocation->toPlainText().toStdString();
-    Conference conference = ui->newConference->toPlainText();
-    Division division = ui->newDivision->toPlainText();
+    string conference = ui->newConference->toPlainText().toStdString();
+    string division = ui->newDivision->toPlainText().toStdString();
     string surface = ui->newSurfaceType->toPlainText().toStdString();
-    RoofType roof = ui->newRoofType->toPlainText();
+    string roof = ui->newRoofType->toPlainText().toStdString();
     int year = ui->newOpenDate->toPlainText().toInt();
 
     bool emptyTextBox = ui->newTeamName->toPlainText().isEmpty();
 
-    if(emptyTextBox)
-    { }
-    else {
-    teamData.push_back(teamName, stadiumName, capacity, location, conference, division, surface, roof, year);
-    }
+
+    Conference conf;
+    Division div;
+    RoofType r;
+
+    if(conference == "National Football Conference") { conf = NFC; }
+    else { conf = AFC; }
+
+    if(division == "NORTH") { div = NORTH; }
+    else if (division == "SOUTH") {div = SOUTH;}
+    else if (division == "WEST") { div = WEST; }
+    else { div = EAST; }
+
+    if(roof == "OPEN") { r = OPEN; }
+    else if (roof == "RETRACTABLE") { r = RETRACTABLE; }
+    else {r = FIXED; }
+
+    TeamData newTeam(teamName, stadiumName, capacity, location, conf, div, surface, r, year);
+
+    if(!emptyTextBox) { teamData.push_back(newTeam); }
 }
 
 void AdminWindow::onRemoveButtonClicked()
