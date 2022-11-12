@@ -22,10 +22,9 @@ private:
     Ui::AdminWindow *ui;
 
 private slots:
-    void on_LoginButton_clicked();
     void setupRemoveTeamComboBox();
-    void onAddButtonClicked();
-    void onRemoveButtonClicked();
+    void on_addNewTeam_clicked();
+    void on_removeTeam_clicked();
 };
 
 #endif // ADMINWINDOW_H

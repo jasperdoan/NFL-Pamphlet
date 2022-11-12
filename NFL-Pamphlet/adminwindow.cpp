@@ -1,22 +1,32 @@
 #include "adminwindow.h"
 #include "ui_adminwindow.h"
 
-AdminWindow::AdminWindow(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::AdminWindow)
+
+// TODO: @snappyappleTheSimple
+//     Add a function to check if the user is an admin
+//          f the user is an admin, then the admin window will be displayed
+//         If the user is not an admin, then the admin window will not be displayed
+//     Fix addTeam() function
+
+
+AdminWindow::AdminWindow(QWidget *parent) : QDialog(parent), ui(new Ui::AdminWindow)
 {
     ui->setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
 
     setupRemoveTeamComboBox();
-    connect(ui->addNewTeam, SIGNAL(clicked()), parent, SLOT(onAddButtonClicked()));
-    connect(ui->removeTeam, SIGNAL(clicked()), parent, SLOT(onRemoveButtonClicked()));
+
+    // Refresh the team list upon adding / removing a team
+    connect(ui->addNewTeam, SIGNAL(clicked()), parent, SLOT(on_refreshButton_clicked()));
+    connect(ui->removeTeam, SIGNAL(clicked()), parent, SLOT(on_refreshButton_clicked()));
 }
+
 
 AdminWindow::~AdminWindow()
 {
     delete ui;
 }
+
 
 void AdminWindow::setupRemoveTeamComboBox()
 {
@@ -24,19 +34,16 @@ void AdminWindow::setupRemoveTeamComboBox()
     // If the stadium name is not already in the combo box, add it
     for (int i = 0; i < (int)teamData.size(); i++)
     {
-        if (ui->selectRemoveTeam->findText(QString::fromStdString(teamData[i].getStadiumName())) == -1)
+        if (ui->selectRemoveTeam->findText(QString::fromStdString(teamData[i].getTeamName())) == -1)
         {
-            ui->selectRemoveTeam->addItem(QString::fromStdString(teamData[i].getStadiumName()));
+            ui->selectRemoveTeam->addItem(QString::fromStdString(teamData[i].getTeamName()));
         }
     }
 }
 
-void AdminWindow::on_LoginButton_clicked()
-{
 
-}
-
-void AdminWindow::onAddButtonClicked()
+//!\\ TODO: @snappyappleTheSimple Fix add team function
+void AdminWindow::on_addNewTeam_clicked()
 {
     string teamName = ui->newTeamName->toPlainText().toStdString();
     string stadiumName = ui->newStadiumName->toPlainText().toStdString();
@@ -48,8 +55,8 @@ void AdminWindow::onAddButtonClicked()
     string roof = ui->newRoofType->toPlainText().toStdString();
     int year = ui->newOpenDate->toPlainText().toInt();
 
-    bool emptyTextBox = ui->newTeamName->toPlainText().isEmpty();
-
+    bool emptyTextBox = teamName.empty() || stadiumName.empty() || capacity == 0 || location.empty() || 
+                        conference.empty() || division.empty() || surface.empty() || roof.empty() || year == 0;
 
     Conference conf;
     Division div;
@@ -58,10 +65,17 @@ void AdminWindow::onAddButtonClicked()
     if(conference == "National Football Conference") { conf = NFC; }
     else { conf = AFC; }
 
-    if(division == "NORTH") { div = NORTH; }
-    else if (division == "SOUTH") {div = SOUTH;}
-    else if (division == "WEST") { div = WEST; }
-    else { div = EAST; }
+    switch (division[0])
+    {
+        case 'N': div = NORTH;
+            break;
+        case 'S': div = SOUTH;
+            break;
+        case 'W': div = WEST;
+            break;
+        case 'E': div = EAST;
+            break;
+    }
 
     if(roof == "OPEN") { r = OPEN; }
     else if (roof == "RETRACTABLE") { r = RETRACTABLE; }
@@ -70,20 +84,23 @@ void AdminWindow::onAddButtonClicked()
     TeamData newTeam(teamName, stadiumName, capacity, location, conf, div, surface, r, year);
 
     if(!emptyTextBox) { teamData.push_back(newTeam); }
+
+    this->close();
 }
 
-void AdminWindow::onRemoveButtonClicked()
+
+void AdminWindow::on_removeTeam_clicked()
 {
+    string teamName = ui->selectRemoveTeam->currentText().toStdString();
 
+    for (int i = 0; i < (int)teamData.size(); i++)
+    {
+        if (teamData[i].getTeamName() == teamName)
+        {
+            teamData.erase(teamData.begin() + i);
+        }
+    }
+
+    this->close();
 }
-/*
-            string teamName;
-            string stadiumName;
-            int capacity;
-            string location;
-            Conference conference;
-            Division division;
-            string surfaceType;
-            RoofType roofType;
-            int yearOpened;
-*/
+
