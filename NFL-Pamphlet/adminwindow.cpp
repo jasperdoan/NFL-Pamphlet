@@ -42,6 +42,7 @@ void AdminWindow::setupRemoveTeamComboBox()
 }
 
 
+//!\\ TODO: @snappyappleTheSimple Fix add team function
 void AdminWindow::on_addNewTeam_clicked()
 {
     string teamName = ui->newTeamName->toPlainText().toStdString();

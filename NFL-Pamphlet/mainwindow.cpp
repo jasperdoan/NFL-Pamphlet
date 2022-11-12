@@ -57,7 +57,8 @@ void MainWindow::on_loginButton_clicked()
     adminWindow->show();                                // Show the AdminWindow object                  
 }
 
-
+//!\\ The refresh function is not well programmed, need to fix it & make it more compatible with the other functions 
+// TODO: Find a more efficient/elegant way to do this
 void MainWindow::on_refreshButton_clicked()
 {
     ui->teamTable->clearContents();
