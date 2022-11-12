@@ -74,25 +74,7 @@ void MainWindow::on_refreshButton_clicked()
 
 void MainWindow::on_dropdownBox_activated()
 {
-//    int totalSeatCap;
-//    totalSeatCap = 0;
-
-//    if (ui->dropdownBox->currentText() == "Original")
-//    {
-//        for (int i = 0; i < (int)teamData.size(); i++)
-//        {
-//            totalSeatCap += teamData[i].getCapacity();
-//        }
-//        ui->totalCapacityNum->setNum(totalSeatCap); // display og list total seats
-//    }
-//    else if (ui->dropdownBox->currentText() == "Updated")
-//    {
-//        for (int i = 0; i < (int)filteredData.size(); i++)
-//        {
-//            totalSeatCap += filteredData[i].getCapacity();
-//        }
-//        ui->totalCapacityNum->setNum(totalSeatCap); // display updated list total seats
-//     }
+    string dropdown = ui->dropdownBox->currentText().toStdString();
 
     ui->totalCapacityNum->clear();
 
@@ -108,11 +90,11 @@ void MainWindow::on_dropdownBox_activated()
     };
 
 
-    if (ui->dropdownBox->currentText() == "Original")
+    if (dropdown == "Original")
     {
         ui->totalCapacityNum->setNum(sumSeatCap(teamData));
     }
-    else if (ui->dropdownBox->currentText() == "Updated")
+    else
     {
         ui->totalCapacityNum->setNum(sumSeatCap(currentData));
     }

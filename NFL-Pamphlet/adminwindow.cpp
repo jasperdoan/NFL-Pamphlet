@@ -2,12 +2,23 @@
 #include "ui_adminwindow.h"
 
 
+// TODO: @snappyappleTheSimple
+//     Add a function to check if the user is an admin
+//          f the user is an admin, then the admin window will be displayed
+//         If the user is not an admin, then the admin window will not be displayed
+//     Fix addTeam() function
+
+
 AdminWindow::AdminWindow(QWidget *parent) : QDialog(parent), ui(new Ui::AdminWindow)
 {
     ui->setupUi(this);
     setAttribute(Qt::WA_DeleteOnClose);
 
     setupRemoveTeamComboBox();
+
+    // Refresh the team list upon adding / removing a team
+    connect(ui->addNewTeam, SIGNAL(clicked()), parent, SLOT(on_refreshButton_clicked()));
+    connect(ui->removeTeam, SIGNAL(clicked()), parent, SLOT(on_refreshButton_clicked()));
 }
 
 
@@ -72,6 +83,8 @@ void AdminWindow::on_addNewTeam_clicked()
     TeamData newTeam(teamName, stadiumName, capacity, location, conf, div, surface, r, year);
 
     if(!emptyTextBox) { teamData.push_back(newTeam); }
+
+    this->close();
 }
 
 
@@ -86,5 +99,7 @@ void AdminWindow::on_removeTeam_clicked()
             teamData.erase(teamData.begin() + i);
         }
     }
+
+    this->close();
 }
 
