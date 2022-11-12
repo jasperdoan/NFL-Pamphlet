@@ -85,7 +85,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Seaitng Capacity</string>
+     <string>Seating Capacity</string>
     </property>
    </widget>
    <widget class="QTextEdit" name="newTeamName">

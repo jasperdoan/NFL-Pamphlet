@@ -70,6 +70,13 @@
         </layout>
        </item>
        <item>
+        <widget class="QPushButton" name="loginButton">
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer name="horizontalSpacer_3">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -87,12 +94,11 @@
          <property name="font">
           <font>
            <pointsize>21</pointsize>
-           <weight>75</weight>
            <bold>true</bold>
           </font>
          </property>
          <property name="text">
-          <string>NFL Pamphlet                      </string>
+          <string>NFL Pamphlet                           </string>
          </property>
         </widget>
        </item>
