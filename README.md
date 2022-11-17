@@ -1,3 +1,7 @@
+# Admin Window
+- username: `Homi`
+- password: `password`
+
 # NFL-Pamphlet
 - Your agile team is to create an interactive pamphlet to provide information for football fans who want learn more about the National Football league.
 <br/>

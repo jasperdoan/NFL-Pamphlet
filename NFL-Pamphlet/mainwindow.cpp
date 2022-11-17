@@ -4,11 +4,15 @@
 
 vector<TeamData> DisplayData::teamData;
 vector<TeamData> DisplayData::filteredData;
+vector<TeamData> DisplayData::currentData;
 
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->dropdownBox->addItem("Original");
+    ui->dropdownBox->addItem("Updated");
 
     // Read data & update both vectors
     readData(teamData, "../data/NFL_Information.csv");
@@ -49,13 +53,22 @@ void MainWindow::on_contactButton_clicked()
 
 void MainWindow::on_loginButton_clicked()
 {
-    adminWindow = new AdminWindow(this);                // Create a new AdminWindow object
-    adminWindow->show();                                // Show the AdminWindow object                  
+
+    string password = ui->passwordLineEdit->text().toStdString();;
+    string username = ui->adminLineEdit->text().toStdString();;
+
+    if(username == "Homi" && password == "password"){
+        adminWindow = new AdminWindow(this);                // Create a new AdminWindow object
+        adminWindow->show();                                // Show the AdminWindow objec
+    }
+              
 }
 
-
+//!\\ The refresh function is not well programmed, need to fix it & make it more compatible with the other functions 
+// TODO: Find a more efficient/elegant way to do this
 void MainWindow::on_refreshButton_clicked()
 {
+    setupTable();
     ui->teamTable->clearContents();
     ui->teamTable->setSortingEnabled(false);    // Disable sorting of table
 
@@ -63,14 +76,45 @@ void MainWindow::on_refreshButton_clicked()
 
     ui->teamTable->setSortingEnabled(true);     // Enable sorting of table
 
+    currentData = filteredData;
     filteredData = teamData;
 }
 
-void MainWindow::on_dropdownBox_clicked()
+
+void MainWindow::reSetupTable()
 {
-    // calc total seat capacity for original & updated list
+    setupTable();
+    on_refreshButton_clicked();
 }
 
+
+void MainWindow::on_dropdownBox_activated()
+{
+    string dropdown = ui->dropdownBox->currentText().toStdString();
+
+    ui->totalCapacityNum->clear();
+
+    auto sumSeatCap = [](vector<TeamData> &anyTeamData)
+    {
+        int totalSeatCap = 0;
+
+        for (int i = 0; i < (int)anyTeamData.size(); i++)
+        {
+            totalSeatCap += anyTeamData[i].getCapacity();
+        }
+        return totalSeatCap;
+    };
+
+
+    if (dropdown == "Original")
+    {
+        ui->totalCapacityNum->setNum(sumSeatCap(teamData));
+    }
+    else
+    {
+        ui->totalCapacityNum->setNum(sumSeatCap(currentData));
+    }
+}
 
 void MainWindow::setupTable()
 {
