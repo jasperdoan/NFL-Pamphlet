@@ -17,8 +17,8 @@ AdminWindow::AdminWindow(QWidget *parent) : QDialog(parent), ui(new Ui::AdminWin
     setupRemoveTeamComboBox();
 
     // Refresh the team list upon adding / removing a team
-    connect(ui->addNewTeam, SIGNAL(clicked()), parent, SLOT(on_refreshButton_clicked()));
-    connect(ui->removeTeam, SIGNAL(clicked()), parent, SLOT(on_refreshButton_clicked()));
+    connect(ui->addNewTeam, SIGNAL(clicked()), parent, SLOT(reSetupTable()));
+    connect(ui->removeTeam, SIGNAL(clicked()), parent, SLOT(reSetupTable()));
 }
 
 

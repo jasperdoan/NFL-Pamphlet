@@ -81,6 +81,13 @@ void MainWindow::on_refreshButton_clicked()
 }
 
 
+void MainWindow::reSetupTable()
+{
+    setupTable();
+    on_refreshButton_clicked();
+}
+
+
 void MainWindow::on_dropdownBox_activated()
 {
     string dropdown = ui->dropdownBox->currentText().toStdString();
