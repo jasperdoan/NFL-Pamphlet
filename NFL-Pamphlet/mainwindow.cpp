@@ -68,7 +68,6 @@ void MainWindow::on_loginButton_clicked()
 // TODO: Find a more efficient/elegant way to do this
 void MainWindow::on_refreshButton_clicked()
 {
-    setupTable();
     ui->teamTable->clearContents();
     ui->teamTable->setSortingEnabled(false);    // Disable sorting of table
 
@@ -78,6 +77,13 @@ void MainWindow::on_refreshButton_clicked()
 
     currentData = filteredData;
     filteredData = teamData;
+}
+
+
+void MainWindow::reSetupTable()
+{
+    setupTable();
+    on_refreshButton_clicked();
 }
 
 
