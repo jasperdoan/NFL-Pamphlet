@@ -42,6 +42,7 @@ void AdminWindow::setupRemoveTeamComboBox()
 }
 
 
+
 //!\\ TODO: @snappyappleTheSimple Fix add team function
 void AdminWindow::on_addNewTeam_clicked()
 {
@@ -57,6 +58,7 @@ void AdminWindow::on_addNewTeam_clicked()
 
     bool emptyTextBox = teamName.empty() || stadiumName.empty() || capacity == 0 || location.empty() || 
                         conference.empty() || division.empty() || surface.empty() || roof.empty() || year == 0;
+
 
     Conference conf;
     Division div;
@@ -81,12 +83,15 @@ void AdminWindow::on_addNewTeam_clicked()
     else if (roof == "RETRACTABLE") { r = RETRACTABLE; }
     else {r = FIXED; }
 
-    TeamData newTeam(teamName, stadiumName, capacity, location, conf, div, surface, r, year);
 
-    if(!emptyTextBox) { teamData.push_back(newTeam); }
+
+    if(!emptyTextBox) { 
+        teamData.push_back(NFLData::TeamData(teamName, stadiumName, capacity, location, conf, div, surface, r, year));
+    }
 
     this->close();
 }
+
 
 
 void AdminWindow::on_removeTeam_clicked()
