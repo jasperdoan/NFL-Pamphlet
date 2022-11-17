@@ -53,8 +53,15 @@ void MainWindow::on_contactButton_clicked()
 
 void MainWindow::on_loginButton_clicked()
 {
-    adminWindow = new AdminWindow(this);                // Create a new AdminWindow object
-    adminWindow->show();                                // Show the AdminWindow object                  
+
+    string password = ui->passwordLineEdit->text().toStdString();;
+    string username = ui->adminLineEdit->text().toStdString();;
+
+    if(username == "Homi" && password == "password"){
+        adminWindow = new AdminWindow(this);                // Create a new AdminWindow object
+        adminWindow->show();                                // Show the AdminWindow objec
+    }
+              
 }
 
 //!\\ The refresh function is not well programmed, need to fix it & make it more compatible with the other functions 
